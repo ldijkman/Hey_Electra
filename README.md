@@ -9,5 +9,6 @@ timed switching, easy set and overview, more and better then most commercial pro
 
 https://jsfiddle.net/luberth/ow3zceyn/show/
 
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/mdns_relais_webpage.png" width="50%" heigth="50%">
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="50%" heigth="50%">
