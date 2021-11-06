@@ -13,6 +13,8 @@ timed switching, easy set and overview, more and better then most commercial pro
 
 https://jsfiddle.net/luberth/ow3zceyn/show/
 
+Needs a countdown, turn light off in ??? minutes
+
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/mdns_relais_webpage.png" width="75%" heigth="75%">
 
 ---
