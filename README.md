@@ -11,7 +11,7 @@ Browse to 192.168.4.1
 
 Configure and browse to http://?????.local adres wich you have just set
 
-Android does not support mdns use bonjourbrowser app
+Android Chrome does not support mdns use bonjourbrowser app
 
 No external apps or services needed (4 android bonjour app & NTP time)
 
