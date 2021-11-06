@@ -43,6 +43,8 @@ No settings hardcoded on first startup connect WiFi direct to esp8266 AP=AccessP
 
 Tzapu wifimanager direct WiFi AP=AccessPoint connection browse to http://192.168.4.1 ("router control/admin" or "router beheren" in dutch)
 
+choose the wifi router netwprk ssid / name the esp8266 relais switch needs to connect to and the password
+
 MDNS field "Garage" becomes http://Garage.local
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/Screenshot_20211016-150818_Chrome.jpg" width="40%" heigth="40%">
