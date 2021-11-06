@@ -9,7 +9,7 @@ No settings hardcoded on first startup connect wifi direct to esp8266 AP=AccessP
 
 Browse to 192.168.4.1
 
-Configure and browse to http://?????.local adres wich you have set
+Configure and browse to http://?????.local adres wich you have just set
 
 Android does not support mdns use bonjourbrowser app
 
