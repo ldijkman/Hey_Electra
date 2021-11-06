@@ -13,6 +13,14 @@ https://jsfiddle.net/luberth/ow3zceyn/show/
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/mdns_relais_webpage.png" width="75%" heigth="75%">
 
+---
+https://jsfiddle.net/luberth/ow3zceyn/show/
+
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/timed_switching.png" width="75%" heigth="75%">
+
+https://jsfiddle.net/luberth/ow3zceyn/show/
+---
+
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="50%" heigth="50%">
 
 no monthly or yearly payments to unlock more features or hide ads
