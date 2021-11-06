@@ -3,7 +3,17 @@ ESP8266 ESP8285 ESP32 mDNS Wifi Relais Switch with switched time settings
 
 Easy Home Automation
 
-No external apps or services needed (bonjour app & NTP time)
+Tzapu wifimanager for wifi credentials dot.local mdns adres and i/o config
+
+No settings hardcoded on first startup connect direct to esp accespoint
+
+Browse to 192.168.4.1
+
+Configure and browse to http://?????.local adres
+
+Android does not support mdns use bonjourbrowser app
+
+No external apps or services needed (4 android bonjour app & NTP time)
 
 each device automaticly scanned linked URL list of all other devices in local network
 
