@@ -17,6 +17,6 @@ https://jsfiddle.net/luberth/ow3zceyn/show/
 
 no monthly or yearly payments to unlock more features or hide ads
 
-butt, you are free to donate
+you are free!
 
 http://paypal.me/ldijkman
