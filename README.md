@@ -39,7 +39,7 @@ https://jsfiddle.net/luberth/ow3zceyn/show/
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="50%" heigth="50%">
 
-no monthly or yearly payments to unlock more features or hide ads
+no monthly fees or yearly payments to unlock more features or hide ads
 
 you are free!
 
