@@ -5,7 +5,7 @@ Easy Home Automation
 
 Tzapu wifimanager for wifi credentials dot.local mdns adres and i/o config
 
-No settings hardcoded on first startup connect direct to esp accespoint
+No settings hardcoded on first startup connect wifi direct to esp8266 AP=AccessPoint
 
 Browse to 192.168.4.1
 
