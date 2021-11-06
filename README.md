@@ -17,4 +17,4 @@ no monthly or yearly payments to unlock more features or hide ads
 
 butt, you are free to donate
 
-http://paypall.me/ldijkman
+http://paypal.me/ldijkman
