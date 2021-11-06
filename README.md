@@ -9,7 +9,7 @@ No settings hardcoded on first startup connect direct to esp accespoint
 
 Browse to 192.168.4.1
 
-Configure and browse to http://?????.local adres
+Configure and browse to http://?????.local adres wich you have set
 
 Android does not support mdns use bonjourbrowser app
 
