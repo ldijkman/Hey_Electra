@@ -5,6 +5,8 @@ each device automaticly scanned linked URL list of all other devices in local ne
 
 no IP numbers but human friendly http://*.local addresses like http://living.local ,http://kitchen.local etcetera
 
+https://github.com/ldijkman/ART-ESP32-Touch-TFT-Thermostat/blob/main/test/art_test_1/Remote_WiFi_Sense_Switch/ESP8266_MDNS_Hostname_relais_switch_list_other_on_webpage.ino.ino
+
 timed switching, easy set and overview, more and better then most commercial products 
 
 https://jsfiddle.net/luberth/ow3zceyn/show/
