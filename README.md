@@ -39,6 +39,12 @@ https://jsfiddle.net/luberth/ow3zceyn/show/
 https://jsfiddle.net/luberth/ow3zceyn/show/
 ---
 
+Tzapu wifimanager direct wifi AccessPoint connection browse to http://12.168.4.1 ("router admin" or "router beheren" in duth)
+
+MDNS field "Garage" becomes http://Garage.local
+
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/Screenshot_20211016-150818_Chrome.jpg" width="100%" heigth="100%">
+
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="100%" heigth="100%">
 
 no monthly fees or yearly payments to unlock more features or hide ads
