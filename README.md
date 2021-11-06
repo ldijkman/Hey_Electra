@@ -15,6 +15,8 @@ Android Chrome does not support mdns use bonjourbrowser app
 
 No external apps or services needed (4 android bonjour app & NTP time)
 
+Android BonjourBrowser http://wellenvogel.de/software/index.html
+
 each device automaticly scanned linked URL list of all other devices in local network
 
 no IP numbers but human friendly logical http://*.local addresses like http://living.local ,http://kitchen.local etcetera
