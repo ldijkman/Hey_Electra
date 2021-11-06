@@ -47,7 +47,11 @@ choose the wifi router netwprk ssid / name the esp8266 relais switch needs to co
 
 MDNS field "Garage" becomes http://Garage.local
 
+https://youtu.be/sRqMcyHR-Ls
+
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/Screenshot_20211016-150818_Chrome.jpg" width="40%" heigth="40%">
+
+https://youtu.be/sRqMcyHR-Ls
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="100%" heigth="100%">
 
