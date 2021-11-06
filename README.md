@@ -43,7 +43,7 @@ Tzapu wifimanager direct WiFi AP=AccessPoint connection browse to http://192.168
 
 MDNS field "Garage" becomes http://Garage.local
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/Screenshot_20211016-150818_Chrome.jpg" width="50%" heigth="50%">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/Screenshot_20211016-150818_Chrome.jpg" width="40%" heigth="40%">
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="100%" heigth="100%">
 
