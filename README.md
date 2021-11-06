@@ -8,4 +8,4 @@ timed switching, easy set and overview, more and better then most commercial pro
 https://jsfiddle.net/luberth/ow3zceyn/show/
 
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="50%" heigth="50%">
