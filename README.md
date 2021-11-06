@@ -39,7 +39,7 @@ https://jsfiddle.net/luberth/ow3zceyn/show/
 https://jsfiddle.net/luberth/ow3zceyn/show/
 ---
 
-Tzapu wifimanager direct wifi AccessPoint connection browse to http://12.168.4.1 ("router admin" or "router beheren" in duth)
+Tzapu wifimanager direct wifi AccessPoint connection browse to http://12.168.4.1 ("router control/admin" or "router beheren" in dutch)
 
 MDNS field "Garage" becomes http://Garage.local
 
