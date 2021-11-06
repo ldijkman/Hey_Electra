@@ -3,6 +3,8 @@ ESP8266 ESP8285 ESP32 mDNS Wifi Relais Switch with switched time settings
 
 Easy Home Automation
 
+No external apps or services needed (bonjour app & NTP time)
+
 each device automaticly scanned linked URL list of all other devices in local network
 
 no IP numbers but human friendly logical http://*.local addresses like http://living.local ,http://kitchen.local etcetera
