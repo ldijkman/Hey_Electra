@@ -19,7 +19,7 @@ Android BonjourBrowser http://wellenvogel.de/software/index.html
 
 each device automaticly scanned linked URL list of all other devices in local network
 
-no IP numbers but human friendly logical http://*.local addresses like http://living.local ,http://kitchen.local etcetera
+no IP numbers but human friendly logical http://*.local addresses like http://living.local ,http://kitchen.local etcetera (set and choose it yourself)
 
 https://github.com/ldijkman/ART-ESP32-Touch-TFT-Thermostat/blob/main/test/art_test_1/Remote_WiFi_Sense_Switch/ESP8266_MDNS_Hostname_relais_switch_list_other_on_webpage.ino.ino
 
