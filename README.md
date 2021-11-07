@@ -30,6 +30,8 @@ timed switching, easy set and overview, more and better then most commercial pro
 
 https://jsfiddle.net/luberth/ow3zceyn/show/
 
+What is an inching switch?
+
 Needs a countdown, turn light off in ??? minutes (Only if lightstart ON was from button or webbutton)
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/mdns_relais_webpage.png" width="100%" heigth="100%">
