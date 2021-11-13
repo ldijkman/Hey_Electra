@@ -58,7 +58,7 @@ https://youtu.be/sRqMcyHR-Ls
 
 https://youtu.be/sRqMcyHR-Ls
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="30%" heigth="30%">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="25%" heigth="25%">
 
 no monthly fees or yearly payments to unlock more features or hide ads
 
