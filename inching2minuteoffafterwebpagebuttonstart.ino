@@ -1,6 +1,9 @@
 
 
-// https://github.com/ldijkman/Hey_Electra
+
+
+//http://10.10.100.111/timer?180  time in seconds change inching countdownofftimer
+
 // esp8266 relais switch config portal mdns http//?????.local hostnames
 //
 // https://www.youtube.com/watch?v=sRqMcyHR-Ls
@@ -458,7 +461,22 @@ void loop() {
     return;
   }
 
+  if (request.indexOf("/timer") != -1)
+  {
+ // String value= arg("value");
+ // int number= value.toint();
+ // Serial.println(value);
+//
+  Serial.print("request");Serial.print(request);
+  Serial.println("endrequest");
+//  GET /timer?10000 HTTP/1.1endrequest
 
+request.replace("GET /timer?","");
+request.replace(" HTTP/1.1","");
+lampontime= atol(request.c_str())*1000;
+Serial.print("number");Serial.print(lampontime);
+  Serial.println("number");
+  }
 
   if (request.indexOf("/LED=ON") != -1)
   {
@@ -492,7 +510,8 @@ void loop() {
   client.print("\">");
   client.print("<body><center><h4>");
   client.println(formattedTime);
-
+  client.print("<br>");
+client.println(lampontime);
   if (lamponfromwebpagebutton) {
     client.print("<br> OFF in ");
     client.println(lampontime / 1000 - (millis() - lamponstart) / 1000);
@@ -521,6 +540,13 @@ void loop() {
   client.print("\"><h4>http://");
   client.print(WiFi.localIP());
   client.println("</h4></a>");
+
+
+  client.print("turn off in 3600 seconds <br><a href=\"http://");
+  client.print(WiFi.localIP());
+  client.print("/timer?3600\"><h4>http://");
+  client.print(WiFi.localIP());
+  client.println("/timer?3600</h4></a>");
 
   /*
     <script type = "text/javascript" >
@@ -693,6 +719,9 @@ void hostProbeResult(String p_pcDomainName, bool p_bProbeResult) {
     }
   }
 }
+
+
+
 
 
 
