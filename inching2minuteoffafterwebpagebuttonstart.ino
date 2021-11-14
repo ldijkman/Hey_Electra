@@ -1,3 +1,6 @@
+
+
+// https://github.com/ldijkman/Hey_Electra
 // esp8266 relais switch config portal mdns http//?????.local hostnames
 //
 // https://www.youtube.com/watch?v=sRqMcyHR-Ls
@@ -74,8 +77,8 @@ int intbuttonpin;                             // for char string to int
 int intstatusledpin;                          // for char string to int
 
 unsigned long lamponstart;
-unsigned long lampontime=2*60*1000L; //inching
-int lamponfromwebpagebutton=0;
+unsigned long lampontime = 2 * 60 * 1000L; //inching
+int lamponfromwebpagebutton = 0;
 int value = LOW;
 /*
    Global defines and vars
@@ -313,7 +316,7 @@ void setup() {
 
 
 
-timeClient.update();
+  timeClient.update();
 
 }
 
@@ -324,80 +327,80 @@ String formattedTime;
 void loop() {
   // put your main code here, to run repeatedly:
 
-if (lamponfromwebpagebutton){
-//inching checkbox and value on webbpage??  turn lamp off 2 minutes after start from webbutton
-if ((millis() - lamponstart)  > lampontime ) { // turn lamp off 2 minutes after start from webbutton     compare stored TempLong to current millis() counter  screen timeout
-digitalWrite(intrelaispin, LOW); // Turn relaispin OFF
-    value = LOW;
-    digitalWrite(intstatusledpin, HIGH);
-    Serial.println(intrelaispin);
-    lamponfromwebpagebutton=0;
+  if (lamponfromwebpagebutton) {
+    //inching checkbox and value on webbpage??  turn lamp off 2 minutes after start from webbutton
+    if ((millis() - lamponstart)  > lampontime ) { // turn lamp off 2 minutes after start from webbutton     compare stored TempLong to current millis() counter  screen timeout
+      digitalWrite(intrelaispin, LOW); // Turn relaispin OFF
+      value = LOW;
+      digitalWrite(intstatusledpin, HIGH);
+      Serial.println(intrelaispin);
+      lamponfromwebpagebutton = 0;
     }
 
-}
+  }
 
 
 
-    if ((millis() - TempLong2)  > 60000) { // compare stored TempLong to current millis() counter  screen timeout
+  if ((millis() - TempLong2)  > 60000) { // compare stored TempLong to current millis() counter  screen timeout
     timeClient.update();
-    TempLong2 = millis();  // store millis() 
+    TempLong2 = millis();  // store millis()
   }
   if ((millis() - TempLong)  > 1000) { // compare stored TempLong to current millis() counter  screen timeout
-   
+
     unsigned long epochTime = timeClient.getEpochTime();
     Serial.print("Epoch Time: ");
-    Serial.println(epochTime);  
+    Serial.println(epochTime);
     formattedTime = timeClient.getFormattedTime();
     Serial.print("Formatted Time: ");
     Serial.println(formattedTime);
-       //Get a time structure
-    struct tm *ptm = gmtime ((time_t *)&epochTime);
-    TempLong = millis();  // store millis() 
-  }
-
-/*
-
-    int currentHour = timeClient.getHours();
-    Serial.print("Hour: ");
-    Serial.println(currentHour);
-
-    int currentMinute = timeClient.getMinutes();
-    Serial.print("Minutes: ");
-    Serial.println(currentMinute);
-
-    int currentSecond = timeClient.getSeconds();
-    Serial.print("Seconds: ");
-    Serial.println(currentSecond);
-
-    String weekDay = weekDays[timeClient.getDay()];
-    Serial.print("Week Day: ");
-    Serial.println(weekDay);
-
     //Get a time structure
     struct tm *ptm = gmtime ((time_t *)&epochTime);
+    TempLong = millis();  // store millis()
+  }
 
-    int monthDay = ptm->tm_mday;
-    Serial.print("Month day: ");
-    Serial.println(monthDay);
+  /*
 
-    int currentMonth = ptm->tm_mon+1;
-    Serial.print("Month: ");
-    Serial.println(currentMonth);
+      int currentHour = timeClient.getHours();
+      Serial.print("Hour: ");
+      Serial.println(currentHour);
 
-    String currentMonthName = months[currentMonth-1];
-    Serial.print("Month name: ");
-    Serial.println(currentMonthName);
+      int currentMinute = timeClient.getMinutes();
+      Serial.print("Minutes: ");
+      Serial.println(currentMinute);
 
-    int currentYear = ptm->tm_year+1900;
-    Serial.print("Year: ");
-    Serial.println(currentYear);
+      int currentSecond = timeClient.getSeconds();
+      Serial.print("Seconds: ");
+      Serial.println(currentSecond);
 
-    //Print complete date:
-    String currentDate = String(currentYear) + "-" + String(currentMonth) + "-" + String(monthDay);
-    Serial.print("Current date: ");
-    Serial.println(currentDate);
+      String weekDay = weekDays[timeClient.getDay()];
+      Serial.print("Week Day: ");
+      Serial.println(weekDay);
 
-    Serial.println("");
+      //Get a time structure
+      struct tm *ptm = gmtime ((time_t *)&epochTime);
+
+      int monthDay = ptm->tm_mday;
+      Serial.print("Month day: ");
+      Serial.println(monthDay);
+
+      int currentMonth = ptm->tm_mon+1;
+      Serial.print("Month: ");
+      Serial.println(currentMonth);
+
+      String currentMonthName = months[currentMonth-1];
+      Serial.print("Month name: ");
+      Serial.println(currentMonthName);
+
+      int currentYear = ptm->tm_year+1900;
+      Serial.print("Year: ");
+      Serial.println(currentYear);
+
+      //Print complete date:
+      String currentDate = String(currentYear) + "-" + String(currentMonth) + "-" + String(monthDay);
+      Serial.print("Current date: ");
+      Serial.println(currentDate);
+
+      Serial.println("");
   */
 
   MDNS.update();
@@ -464,8 +467,8 @@ digitalWrite(intrelaispin, LOW); // Turn relaispin OFF
     digitalWrite(intstatusledpin, LOW  );
     Serial.println(intrelaispin);
 
-    lamponstart=millis();
-    lamponfromwebpagebutton=1;
+    lamponstart = millis();
+    lamponfromwebpagebutton = 1;
   }
 
   if (request.indexOf("/LED=OFF") != -1)
@@ -488,12 +491,13 @@ digitalWrite(intrelaispin, LOW); // Turn relaispin OFF
   client.print(WiFi.localIP());
   client.print("\">");
   client.print("<body><center><h4>");
-   client.println(formattedTime);
-client.print("<br> off in ");
-if(lamponfromwebpagebutton){
-    client.println(lampontime/1000-(millis()-lamponstart) /1000);
-}
-client.print("<br> LIGHT = ");
+  client.println(formattedTime);
+
+  if (lamponfromwebpagebutton) {
+    client.print("<br> OFF in ");
+    client.println(lampontime / 1000 - (millis() - lamponstart) / 1000);
+  }
+  client.print("<br> LIGHT = ");
 
   if (value == HIGH)
   {
@@ -689,6 +693,9 @@ void hostProbeResult(String p_pcDomainName, bool p_bProbeResult) {
     }
   }
 }
+
+
+
 
 
 
