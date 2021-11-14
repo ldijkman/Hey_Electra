@@ -1,7 +1,7 @@
 
 
 // i think the code should be changed to espasyncwebserver
-
+// not like it is now with a page reload every 5 seconds
 
 //http://10.10.100.111/timer?180  time in seconds change inching countdownofftimer
 //http://10.10.100.111/timer?3600  time in seconds change inching countdownofftimer
