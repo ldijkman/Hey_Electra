@@ -2,6 +2,9 @@
 
 
 
+
+
+
 //http://10.10.100.111/timer?180  time in seconds change inching countdownofftimer
 
 // esp8266 relais switch config portal mdns http//?????.local hostnames
@@ -463,19 +466,19 @@ void loop() {
 
   if (request.indexOf("/timer") != -1)
   {
- // String value= arg("value");
- // int number= value.toint();
- // Serial.println(value);
-//
-  Serial.print("request");Serial.print(request);
-  Serial.println("endrequest");
-//  GET /timer?10000 HTTP/1.1endrequest
+    // String value= arg("value");
+    // int number= value.toint();
+    // Serial.println(value);
+    //
+    Serial.print("request"); Serial.print(request);
+    Serial.println("endrequest");
+    //  GET /timer?10000 HTTP/1.1endrequest
 
-request.replace("GET /timer?","");
-request.replace(" HTTP/1.1","");
-lampontime= atol(request.c_str())*1000;
-Serial.print("number");Serial.print(lampontime);
-  Serial.println("number");
+    request.replace("GET /timer?", "");
+    request.replace(" HTTP/1.1", "");
+    lampontime = atol(request.c_str()) * 1000;
+    Serial.print("number"); Serial.print(lampontime);
+    Serial.println("number");
   }
 
   if (request.indexOf("/LED=ON") != -1)
@@ -510,18 +513,19 @@ Serial.print("number");Serial.print(lampontime);
   client.print("\">");
   client.print("<body><center><h4>");
   client.println(formattedTime);
-  client.print("<br>");
-client.println(lampontime);
-  if (lamponfromwebpagebutton) {
-    client.print("<br> OFF in ");
-    client.println(lampontime / 1000 - (millis() - lamponstart) / 1000);
-  }
-  client.print("<br> LIGHT = ");
+  client.print("<br>timer set to ");
+  client.println(lampontime / 1000);
+  client.print(" seconds<br> LIGHT = ");
 
   if (value == HIGH)
   {
     client.print("ON</h4>");
-    client.println("<a href=\"/LED=OFF\"\"><button style=\"height:160px; width:320px; background-color:yellow;\"><h1> Turn OFF </h1></button></a>");
+    client.println("<a href=\"/LED=OFF\"\"><button style=\"height:160px; width:320px; background-color:yellow;\"><h1> Turn OFF </h1>");
+    if (lamponfromwebpagebutton) {
+      client.print("<br> OFF in ");
+      client.println(lampontime / 1000 - (millis() - lamponstart) / 1000);
+    }
+    client.println("</button></a>");
   }
   else
   {
@@ -719,6 +723,9 @@ void hostProbeResult(String p_pcDomainName, bool p_bProbeResult) {
     }
   }
 }
+
+
+
 
 
 
