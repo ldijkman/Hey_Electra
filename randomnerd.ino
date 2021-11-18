@@ -1,3 +1,10 @@
+
+// espasyncwebserver maybe better
+// needs wifimanager
+// needs mdns name and list
+// needs  timers https://jsfiddle.net/luberth/h2tqgecy/show/
+
+
 /*********
   Rui Santos
   Complete project details at https://RandomNerdTutorials.com/esp32-esp8266-web-server-timer-pulse/
