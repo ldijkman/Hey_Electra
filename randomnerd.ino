@@ -2,7 +2,7 @@
 // espasyncwebserver maybe better
 // 
 // no hardcoding wifi settings and i/o => needs tzapu wifimanager with mdns name setting and i/o config and ntp server  and offset ntp
-// needs mdns name and list easy dot local url address like http://randomnerd.local = no hard IP numbers
+// needs mdns name and list easy dot local url address like http://randomnerd.local = no hard to lookup and remember IP numbers
 // needs easy read/set timers https://jsfiddle.net/luberth/h2tqgecy/show/
 
 
