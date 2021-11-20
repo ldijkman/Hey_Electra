@@ -61,8 +61,7 @@ https://youtu.be/sRqMcyHR-Ls
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="25%" heigth="25%">
 
 
-make it look better
-codepen.io/Stockin/pen/qJqVYy
+make it look better http://codepen.io/Stockin/pen/qJqVYy
 
 no monthly fees or yearly payments to unlock more features or hide ads
 
