@@ -1,7 +1,7 @@
 
 // espasyncwebserver maybe better
 // needs wifimanager
-// needs mdns name and list
+// needs mdns name and list easy dot local url address like http://randomnerd.local = no hard IP numbers
 // needs  timers https://jsfiddle.net/luberth/h2tqgecy/show/
 
 
