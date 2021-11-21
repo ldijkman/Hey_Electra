@@ -4,6 +4,7 @@
 // no hardcoding wifi settings and i/o => needs tzapu wifimanager with mdns name setting and i/o config and ntp server  and offset ntp
 // needs mdns name and list easy dot local url address like http://randomnerd.local = no hard to lookup and remember IP numbers
 // needs easy read/set timers https://jsfiddle.net/luberth/h2tqgecy/show/
+// needs elegant ota over the air updates https://randomnerdtutorials.com/esp8266-nodemcu-ota-over-the-air-vs-code/
 
 
 /*********
@@ -12,6 +13,12 @@
   
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
+  
+  treid this example 
+  but not so nice 
+  if a running timer page is reloaded or opened in another browser 
+  it is showing a fresh page
+  not the actual running timer
 *********/
 
 // Import required libraries
