@@ -17,7 +17,7 @@
   treid this example 
   but not so nice 
   if a running timer page is reloaded or opened in another browser 
-  it is showing a fresh page
+  it is showing a fresh page (not the actual time/state)
   not the actual running timer
 *********/
 
