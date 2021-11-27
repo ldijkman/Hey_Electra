@@ -60,6 +60,8 @@ https://youtu.be/sRqMcyHR-Ls
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/bixby.jpg" width="25%" heigth="25%">
 
+---
+
 U got that look
 
 make it look better, make the device's webpage fancy
@@ -67,6 +69,8 @@ make it look better, make the device's webpage fancy
 http://codepen.io/Stockin/pen/qJqVYy
 
 https://codepen.io/FlorinCornea/pen/NWxEgPg
+
+---
 
 no monthly fees or yearly payments to unlock more features or hide ads
 
