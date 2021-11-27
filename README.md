@@ -62,7 +62,7 @@ https://youtu.be/sRqMcyHR-Ls
 
 U got that look
 
-make it look better
+make it look better, make the device's webpage fancy
 
 http://codepen.io/Stockin/pen/qJqVYy
 
