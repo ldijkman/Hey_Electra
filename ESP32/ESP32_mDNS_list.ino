@@ -18,7 +18,7 @@ mdns service discovery browser list .local
 const char* ssid     = "Bangert_30_Andijk";
 const char* password = "ookikwilerin";
 
-const char* mdnsdotlocalurl = "electra"; // http://electra.local
+const char* mdnsdotlocalurl = "electra"; // becomes http://electra.local give each device a unique name
 
 void setup() {
     Serial.begin(115200);
