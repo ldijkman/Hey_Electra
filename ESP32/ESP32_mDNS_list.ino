@@ -18,6 +18,8 @@ mdns service discovery browser list .local
 const char* ssid     = "Bangert_30_Andijk";
 const char* password = "ookikwilerin";
 
+const char* mdnsdotlocalurl = "electra"; // http://electra.local
+
 void setup() {
     Serial.begin(115200);
     WiFi.begin(ssid, password);
@@ -31,7 +33,7 @@ void setup() {
     Serial.print("IP address: ");
     Serial.println(WiFi.localIP());
 
-    if (!MDNS.begin("ESP32_Browser")) {
+    if (!MDNS.begin(mdnsdotlocalurl)) {
         Serial.println("Error setting up MDNS responder!");
         while(1){
             delay(1000);
@@ -45,20 +47,20 @@ void setup() {
 void loop() {
     browseService("http", "tcp");
     delay(1000);
-    browseService("arduino", "tcp");
-    delay(1000);
-    browseService("workstation", "tcp");
-    delay(1000);
-    browseService("smb", "tcp");
-    delay(1000);
-    browseService("afpovertcp", "tcp");
-    delay(1000);
-    browseService("ftp", "tcp");
-    delay(1000);
-    browseService("ipp", "tcp");
-    delay(1000);
-    browseService("printer", "tcp");
-    delay(10000);
+    //browseService("arduino", "tcp");
+    //delay(1000);
+    //browseService("workstation", "tcp");
+    //delay(1000);
+    //browseService("smb", "tcp");
+    //delay(1000);
+    //browseService("afpovertcp", "tcp");
+    //delay(1000);
+    //browseService("ftp", "tcp");
+   // delay(1000);
+    //browseService("ipp", "tcp");
+    //delay(1000);
+    //browseService("printer", "tcp");
+   // delay(10000);
 }
 
 void browseService(const char * service, const char * proto){
