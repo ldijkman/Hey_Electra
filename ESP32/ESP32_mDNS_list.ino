@@ -9,6 +9,7 @@ mdns service discovery browser list .local
   - Update WiFi SSID and password as necessary.
   - Flash the sketch to two ESP8266 boards  == tested on wemos uno sized esp32
   - The last one powered on should now find the other.
+  - android app bonjourbrowser also lists http://*.local devices in network
  */
 
 #include <WiFi.h>
