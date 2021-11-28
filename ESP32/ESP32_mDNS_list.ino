@@ -10,6 +10,14 @@ mdns service discovery browser list .local on serial monitor 115200
   - Flash the sketch to two ESP8266 boards  == tested on wemos uno sized esp32
   - The last one powered on should now find the other.
   - android app bonjourbrowser also lists http://*.local devices in network
+  
+  my serial monitor result
+  
+Browsing for service _http._tcp.local. ... 3 service(s) found
+  1: art (10.10.100.100:80)
+  2: kitchen (10.10.100.102:80)
+  3: Living (10.10.100.103:80)
+
  */
 
 #include <WiFi.h>
