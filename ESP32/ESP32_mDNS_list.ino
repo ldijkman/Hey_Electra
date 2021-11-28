@@ -15,8 +15,8 @@ mdns service discovery browser list .local
 #include <WiFi.h>
 #include <ESPmDNS.h>
 
-const char* ssid     = "Bangert_30_Andijk";
-const char* password = "ookikwilerin";
+const char* ssid     = "Bangert_30_Andijk";     // wifi router name broadcasted in the air
+const char* password = "ookikwilerin";          // wifi router password
 
 const char* mdnsdotlocalurl = "electra"; // becomes http://electra.local give each device a unique name
 
