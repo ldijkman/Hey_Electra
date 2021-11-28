@@ -18,6 +18,10 @@ Browsing for service _http._tcp.local. ... 3 service(s) found
   2: kitchen (10.10.100.102:80)
   3: Living (10.10.100.103:80)
 
+that makes
+http://art.local
+http://kitchen.local
+http://Living.local
  */
 
 #include <WiFi.h>
