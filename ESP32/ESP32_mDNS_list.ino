@@ -22,6 +22,18 @@ that makes
 http://art.local
 http://kitchen.local
 http://Living.local
+
+
+esp8266 webserver webpage at http://Living.local lists also this device http://electra.local
+Local HTTP services are :
+electra.local
+10.10.100.106
+
+art.local
+10.10.100.100
+
+kitchen.local
+10.10.100.102
  */
 
 #include <WiFi.h>
