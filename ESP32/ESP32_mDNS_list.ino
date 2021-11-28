@@ -9,7 +9,15 @@ mdns service discovery browser list .local on serial monitor 115200
   - Update WiFi SSID and password as necessary.
   - Flash the sketch to two ESP8266 boards  == tested on wemos uno sized esp32
   - The last one powered on should now find the other.
-  - android app bonjourbrowser also lists http://*.local devices in network
+  
+  - Install host software: (so that browser can find http://*.local URL's
+    - my raspberry pi 400 chromium works with .local    
+    - For Linux, install Avahi (http://avahi.org/).
+    - For Windows, install Bonjour (http://www.apple.com/support/bonjour/).
+    - For Mac OSX and iOS support is built in through Bonjour already.
+    - android phone app bonjourbrowser also lists http://*.local devices in network
+                    https://github.com/wellenvogel/BonjourBrowser
+                    https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=gsw
   
   my serial monitor result
   
