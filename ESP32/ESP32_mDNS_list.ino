@@ -1,7 +1,7 @@
 
 /*
 https://github.com/espressif/arduino-esp32/blob/master/libraries/ESPmDNS/examples/mDNS-SD_Extended/mDNS-SD_Extended.ino
-mdns service discovery browser list .local
+mdns service discovery browser list .local on serial monitor 115200
   ESP8266 mDNS-SD responder and query sample
   This is an example of announcing and finding services.
   
