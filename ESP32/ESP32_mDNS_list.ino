@@ -1,5 +1,7 @@
 
 /*
+https://github.com/ldijkman/Hey_Electra/tree/main/ESP32
+
 https://github.com/espressif/arduino-esp32/blob/master/libraries/ESPmDNS/examples/mDNS-SD_Extended/mDNS-SD_Extended.ino
 mdns service discovery browser list .local on serial monitor 115200
   ESP8266 mDNS-SD responder and query sample
@@ -121,3 +123,5 @@ void browseService(const char * service, const char * proto){
     }
     Serial.println();
 }
+
+// https://github.com/ldijkman/Hey_Electra/tree/main/ESP32
