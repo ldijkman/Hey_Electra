@@ -1,4 +1,4 @@
-Easy home automation
+Simple Easy home automation
 
 Automatic scanned linked list of devices in local network
 
