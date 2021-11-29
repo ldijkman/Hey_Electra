@@ -50,10 +50,10 @@ kitchen.local
 const char* ssid     = "Bangert_30_Andijk";     // wifi router name broadcasted in the air
 const char* password = "ookikwilerin";          // wifi router password
 
-const char* mdnsdotlocalurl = "electra";    // becomes http://electra.local give each device a unique name
-// const char* mdnsdotlocalurl = "living";  // becomes http://living.local give each device a unique name
-// const char* mdnsdotlocalurl = "kitchen"; // becomes http://kitchen.local give each device a unique name
-// const char* mdnsdotlocalurl = "garage";  // becomes http://garage.local give each device a unique name
+const char* mdnsdotlocalurl = "electra";    // becomes http://electra.local     give each device a unique name
+// const char* mdnsdotlocalurl = "living";  // becomes http://living.local      give each device a unique name
+// const char* mdnsdotlocalurl = "kitchen"; // becomes http://kitchen.local     give each device a unique name
+// const char* mdnsdotlocalurl = "garage";  // becomes http://garage.local      give each device a unique name
 
 void setup() {
     Serial.begin(115200);
