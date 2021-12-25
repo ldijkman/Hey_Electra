@@ -5,7 +5,7 @@ ESP8266 ESP8285 ESP32 mDNS Wifi Relais Switch with switched time settings
 +Simple Easy Home Automation
 
 -If a new switch is added 
--it's URL & IP is automaticly linked on the webpage off all other devices
+-it's URL & IP is automaticly linked on the webpage off al other mDNS devices on the local network
 -And itself webpage shows URL/IP links to all other devices on the local network automaticly
 ```
 
