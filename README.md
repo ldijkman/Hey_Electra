@@ -3,8 +3,7 @@ ESP8266 ESP8285 ESP32 mDNS Wifi Relais Switch with switched time settings
 
 Simple Easy Home Automation
 ```diff
--
-If a new switch is added 
+-If a new switch is added 
   it is automaticly linked on the webpage off all other devices
 And itself webpage shows links to all other devices on the local network
 ...
