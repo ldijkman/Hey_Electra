@@ -6,7 +6,7 @@ ESP8266 ESP8285 ESP32 mDNS Wifi Relais Switch with switched time settings
 
 -If a new switch is added 
 -it's URL & IP is automaticly linked on the webpage off all other devices
--And itself webpage shows links to all other devices on the local network automaticly
+-And itself webpage shows URL/IP links to all other devices on the local network automaticly
 ```
 
 Tzapu wifimanager for wifi credentials dot.local mdns adres and i/o config
