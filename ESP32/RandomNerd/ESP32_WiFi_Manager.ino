@@ -8,7 +8,7 @@ http://electra.local
  Easy No Hassle home automation  
  BrainPain free home automation 
  
- each swith / device its own URL with webpage
+ each swith / device its own human friendly URL with webpage
      and each webpage should show an automaticly scanned linked list of all mDNS devices in local network
 
   Rui Santos
