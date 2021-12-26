@@ -54,4 +54,4 @@ Free!?
 
 a penny for sharing my thoughts
 
-http://paypal,me/LDijkman
+http://paypal.me/LDijkman
