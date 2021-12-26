@@ -20,6 +20,7 @@ http://electra.local
 
 
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload (turn serial monitor off else failure)
+    howto add to Arduino IDE and use https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/
   
   added mdns dot local URL
     wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
