@@ -4,6 +4,8 @@ http://electra.local
          http://kitchen.local
               http://garage.local
                    ETCETERA!
+                   
+ Easy No Hassle home automation                  
 
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
