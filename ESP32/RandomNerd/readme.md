@@ -40,6 +40,8 @@ Electra shortcut icon on android phone start screen
 
 Electra shortcut icon on android phone start screen
 
+this is the esp32 device http://electra.local => it does not show itself
+
 auto scan list browse for mdns devices on the local network
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_172942.jpg">
