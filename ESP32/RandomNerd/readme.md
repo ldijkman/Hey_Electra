@@ -14,7 +14,7 @@ https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Ma
 
 http://electra.local/
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_073928.jpg" width="75%" height="75%">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_073928.jpg" width="80%" height="80%">
 
 ## android phone BonjourBrowser App
 ## scans / lists automaticly all dot local devices on the local network, touch/click to browse
