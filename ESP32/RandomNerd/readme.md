@@ -44,7 +44,7 @@ Electra shortcut icon on android phone start screen
 
 # easy just click and browse through your house garage and garden webpages;-)
 
-Home Assistant, domoticz nodered nerds can implement it in their BrainPain Spaghetti machines
+Home Assistant, Domoticz NodeRed MQTT Nerds can implement it in their BrainPain Spaghetti machines
 
 and 
 
