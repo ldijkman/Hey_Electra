@@ -33,7 +33,7 @@ http://electra.local
     wanted set mDNS dot local url from wifimanager inputfield
     wanted page refresh to actual switch state if state is changed on another webpage    ajax or websockets?
     wanted i/o setting wifimager input field for relais i/o pin and/or status LED i/o pin
-    wanted ntp time server input field in wifimanager
+    wanted ntp time server input field in wifimanager            https://randomnerdtutorials.com/esp8266-nodemcu-date-time-ntp-client-server-arduino
     wanted ntp time server offset input field in wifimanager
     wanted load change wifimanager.html settings from station STA mode
 *********/
