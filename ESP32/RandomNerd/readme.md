@@ -44,3 +44,14 @@ Home Assistant, domoticz nodered nerds can implement it in their BrainPain Spagh
 and 
 
 your blonde girlfriend can use it
+
+
+Under Construction!
+
+Electra Needs a  Helping Hand!?
+
+Free!? 
+
+a penny for sharing my thoughts
+
+http://paypal,me/LDijkman
