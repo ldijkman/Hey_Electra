@@ -1,6 +1,6 @@
 https://randomnerdtutorials.com/esp32-wi-fi-manager-asyncwebserver/
 
-with mdns
+with human friendly mDNS dot local URL, no hard IP numbers to remember
 
 http://electra.local/
 
