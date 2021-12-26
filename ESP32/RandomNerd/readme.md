@@ -54,7 +54,7 @@ auto scan list browse for mdns devices on the local network
 
 # easy just click and browse through your house garage and garden webpages;-)
 
-Home Assistant, Domoticz NodeRed MQTT Nerds can implement it in their BrainPain Spaghetti machines
+Home Assistant, Domoticz NodeRed MQTT Nerds can implement it in their BrainPain Spaghetti machines (done that, and do not do it again)
 
 and 
 
