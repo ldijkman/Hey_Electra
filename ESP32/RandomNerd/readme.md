@@ -32,3 +32,9 @@ https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=e
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-151343_Chrome.jpg" width="40%" height="40%">
 
 # easy just click and browse through your house garage and garden webpages;-)
+
+Home Assistant, domoticz nodered nerds can use it
+
+and 
+
+your blonde girlfriend can use it
