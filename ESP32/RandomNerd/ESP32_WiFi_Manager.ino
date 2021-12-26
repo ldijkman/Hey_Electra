@@ -275,7 +275,7 @@ void setup() {
           //Serial.printf("POST[%s]: %s\n", p->name().c_str(), p->value().c_str());
         }
       }
-      request->send(200, "text/plain", "Done. ESP will restart, connect to your router and go to IP address: " + ip);
+      request->send(200, "text/plain", "Done. ESP will restart, connect to your router and go to IP address: " + ip + " http://"+mdnsdotlocalurl+".local");
       delay(3000);
       ESP.restart();
     });
