@@ -16,7 +16,7 @@ http://electra.local
   The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 
-  you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload
+  you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload (turn serial monitor off else failure)
   
   added mdns dot local URL
   wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
