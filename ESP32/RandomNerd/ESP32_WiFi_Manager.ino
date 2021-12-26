@@ -51,8 +51,12 @@ const char* mdnsdotlocalurl = "electra";    // becomes http://electra.local     
 // const char* mdnsdotlocalurl = "living";  // becomes http://living.local      give each device a unique name
 // const char* mdnsdotlocalurl = "kitchen"; // becomes http://kitchen.local     give each device a unique name
 // const char* mdnsdotlocalurl = "garage";  // becomes http://garage.local      give each device a unique name
-// on android use the bonjour browser app to see the .local devices on the network 
+// on android phone use the bonjour browser app to see the .local devices on the network 
 // https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=en&gl=US
+// apple does mdns?
+// my raspberry pi does mdns! 
+// windows ?
+
 
 //IPAddress localIP;
 IPAddress localIP(10, 10, 100, 110); // hardcoded
