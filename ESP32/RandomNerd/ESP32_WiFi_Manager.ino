@@ -55,7 +55,7 @@ unsigned long previousMillis = 0;
 const long interval = 10000;  // interval to wait for Wi-Fi connection (milliseconds)
 
 // Set LED GPIO
-const int ledPin = 5;    // wemos d1 mini relais shield
+const int ledPin = 5;    // wemos uno sized esp32 board
 // Stores LED state
 
 String ledState;
