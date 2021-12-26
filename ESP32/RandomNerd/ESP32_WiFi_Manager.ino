@@ -48,17 +48,22 @@ AsyncWebServer server(80);
 const char* PARAM_INPUT_1 = "ssid";
 const char* PARAM_INPUT_2 = "pass";
 const char* PARAM_INPUT_3 = "ip";
+const char* PARAM_INPUT_4 = "mdns";
+const char* PARAM_INPUT_5 = "relaispin";
 
 //Variables to save values from HTML form
 String ssid;
 String pass;
 String ip;
+String mdns;
+String relaispin;
 
 // File paths to save input values permanently
 const char* ssidPath = "/ssid.txt";
 const char* passPath = "/pass.txt";
 const char* ipPath = "/ip.txt";
-
+const char* mdnsPath = "/mdns.txt";
+const char* relaispinPath = "/relaispin.txt";
 
 //next should become an input field for mdns dot local name in wifimanager
 const char* mdnsdotlocalurl = "electra";    // becomes http://electra.local     give each device a unique name
