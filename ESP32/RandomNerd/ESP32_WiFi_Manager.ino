@@ -29,7 +29,7 @@ http://electra.local
 [x] wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
     wanted unique Access point AP name broadcasted in the air == "esp32 wifimanager" + chipid
     wanted set mDNS dot local url from wifimanager inputfield
-    wanted page refresh to actual switch state if state is changed on another webpage
+    wanted page refresh to actual switch state if state is changed on another webpage    ajax or websockets?
     wanted i/o setting wifimager input field for relais i/o pin and/or status LED i/o pin
 *********/
 
