@@ -5,3 +5,7 @@ with mdns
 http://electra.local/
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_073928.jpg">
+
+android phone bonjour browser lists all dot local devices on the local network
+
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-074232_BonjourBrowser.jpg">
