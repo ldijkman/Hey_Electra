@@ -5,7 +5,9 @@ http://electra.local
               http://garage.local
                    ETCETERA!
                    
- Easy No Hassle home automation    
+ Easy No Hassle home automation  
+ BrainPain free use
+ 
  each swith / device its own URL with webpage
      and each webpage should show an automaticly scanned linked list of all mDNS devices in local network
 
