@@ -25,15 +25,15 @@ http://electra.local
   
   added mdns dot local URL
     wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
-    wanted a settable countdown off timer
+    wanted a settable countdown off timer is this called inching switch
     wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
 [x] wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
     wanted unique Access point AP name broadcasted in the air == "esp32 wifimanager" + chipid
     wanted set mDNS dot local url from wifimanager inputfield
     wanted page refresh to actual switch state if state is changed on another webpage    ajax or websockets?
     wanted i/o setting wifimager input field for relais i/o pin and/or status LED i/o pin
-    wanted ntp ime server input field in wifimanager
-    wanted ntp time offset inpu field in wifimanager
+    wanted ntp time server input field in wifimanager
+    wanted ntp time server offset input field in wifimanager
     wanted load change wifimanager.html settings from station STA mode
 *********/
 
