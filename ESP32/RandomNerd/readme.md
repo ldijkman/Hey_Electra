@@ -6,15 +6,15 @@ https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Ma
 
 http://electra.local/
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_073928.jpg">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_073928.jpg" width="50%" height="50%">
 
 ## android phone BonjourBrowser App
 ## scans / lists automaticly all dot local devices on the local network, touch/click to browse
 
 https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=en&gl=US
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-074232_BonjourBrowser.jpg">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-074232_BonjourBrowser.jpg" width="50%" height="50%">
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142216_Chrome.jpg">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142216_Chrome.jpg" width="50%" height="50%">
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142934_Chrome.jpg">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142934_Chrome.jpg" width="50%" height="50%">
