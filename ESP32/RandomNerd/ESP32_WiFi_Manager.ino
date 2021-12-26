@@ -312,6 +312,7 @@ void loop() {
 // next only works/shows its great usefulness if there are more ESP mDNS URL devices on the local network
 // scanned mdns url linked list should be on main webpage refreshed every ?? seconds
 // for now prints to serial monitor
+// https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/ESP32_mDNS_list.ino
 
 void browseService(const char * service, const char * proto){
     Serial.printf("Browsing for service _%s._%s.local. ... ", service, proto);
