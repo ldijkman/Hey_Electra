@@ -36,7 +36,7 @@ future Easy set / overvieuw timed switching, much better and more as most paid c
 
 Electra shortcut icon on android phone start screen
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-154753_One%20UI%20Home.jpg" width="40%" height="40%">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-181852_One%20UI%20Home.jpg" width="40%" height="40%">
 
 Electra shortcut icon on android phone start screen
 
