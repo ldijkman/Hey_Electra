@@ -41,6 +41,7 @@ http://electra.local
     wanted add OTA over the air updates
     wanted sunrise sunset times or geolocation
     wanted add available wifi broadcaster in the air ssid scan to wifimanager.html
+    wanted relais status html or text url webpage 0 or 1 for external programs status display
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
