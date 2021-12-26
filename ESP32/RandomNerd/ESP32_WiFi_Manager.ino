@@ -25,6 +25,7 @@ http://electra.local
   
   added mdns dot local URL
     wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
+            https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/ESP32_mDNS_list.ino
     wanted a settable countdown off timer is this called inching switch
     wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
 [x] wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
