@@ -5,7 +5,8 @@ http://electra.local
               http://garage.local
                    ETCETERA!
                    
- Easy No Hassle home automation                  
+ Easy No Hassle home automation    
+ each swith / device its own URL with webpage
 
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
