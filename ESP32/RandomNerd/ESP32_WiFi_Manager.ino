@@ -1,5 +1,9 @@
 /*********
 http://electra.local
+    http://living.local
+         http://kitchen.local
+              http://garage.local
+                   ETCETERA!
 
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
