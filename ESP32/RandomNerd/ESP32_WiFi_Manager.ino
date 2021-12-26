@@ -10,6 +10,8 @@
   
   added mdns dot loacal url
   should show a scan to liat all dot local urls in local network automaticly on devices webpage
+  wanted a settable countdown off timer
+  wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
