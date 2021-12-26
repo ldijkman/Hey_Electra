@@ -36,6 +36,7 @@ http://electra.local
     wanted ntp time server input field in wifimanager            
     wanted ntp time server offset input field in wifimanager
                                                                    https://randomnerdtutorials.com/esp8266-nodemcu-date-time-ntp-client-server-arduino
+                                                                   https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
     wanted load change wifimanager.html settings from station STA mode
 *********/
 
