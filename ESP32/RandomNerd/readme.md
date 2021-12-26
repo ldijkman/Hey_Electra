@@ -2,6 +2,8 @@ https://randomnerdtutorials.com/esp32-wi-fi-manager-asyncwebserver/
 
 with human friendly mDNS dot local URL, no hard IP numbers to remember
 
+https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
+
 http://electra.local/
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_073928.jpg">
