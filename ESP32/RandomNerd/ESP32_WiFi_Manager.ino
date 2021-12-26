@@ -40,6 +40,7 @@ http://electra.local
     wanted load change wifimanager.html settings from station STA mode
     wanted add OTA over the air updates
     wanted sunrise sunset times or geolocation
+    wanted add available wifi broadcaster in the air ssid scan to wifimanager.html
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
