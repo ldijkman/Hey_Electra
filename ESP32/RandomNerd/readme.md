@@ -6,6 +6,9 @@ http://electra.local/
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_073928.jpg">
 
-## android phone bonjour browser scans / lists automaticly  all dot local devices on the local network
+## android phone BonjourBrowser 
+## scans / lists automaticly  all dot local devices on the local network
+
+https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=en&gl=US
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-074232_BonjourBrowser.jpg">
