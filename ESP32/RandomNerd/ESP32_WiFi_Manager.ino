@@ -15,7 +15,7 @@ http://electra.local
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload
   
   added mdns dot local URL
-  wanted should show a scan to liat all dot local urls in local network automaticly on devices webpage
+  wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
   wanted a settable countdown off timer
   wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
   wanted dhcp ip settting not fixed
