@@ -44,7 +44,7 @@ this is the esp32 device http://electra.local => it does not show itself
 
 auto scan list browse for mdns devices on the local network
 
-prints to serial monitor for now => should publish refreshed on the main webpage for links easy browsing between devices
+prints to serial monitor for now => should publish refreshed on the main webpage for URL/IP links easy browsing between devices
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_172942.jpg">
 
