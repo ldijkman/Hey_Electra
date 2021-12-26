@@ -40,6 +40,12 @@ Electra shortcut icon on android phone start screen
 
 Electra shortcut icon on android phone start screen
 
+auto scan list browse for mdns devices on the local network
+
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211226_172942.jpg">
+
+auto scan list browse for mdns devices on the local network
+
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-151343_Chrome.jpg" width="40%" height="40%">
 
 # easy just click and browse through your house garage and garden webpages;-)
