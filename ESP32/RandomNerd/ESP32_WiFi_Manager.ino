@@ -7,6 +7,9 @@
 
 
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload
+  
+  added mdns dot loacal url
+  should show a scan to liat all dot local urls in local network automaticly on devices webpage
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
