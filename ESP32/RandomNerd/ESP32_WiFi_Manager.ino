@@ -9,7 +9,7 @@ http://electra.local
  BrainPain free home automation 
  
  each swith / device its own human friendly URL with webpage
-     and each webpage should show an automaticly scanned linked list of all mDNS devices in local network
+     and each webpage should show an automaticly scanned linked list of all mDNS URL's devices in local network
 
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
