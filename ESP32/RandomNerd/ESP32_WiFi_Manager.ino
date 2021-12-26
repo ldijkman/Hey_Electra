@@ -46,6 +46,7 @@ http://electra.local
 #include <AsyncTCP.h>                     // https://github.com/me-no-dev/AsyncTCP
 #include "SPIFFS.h"
 #include <ESPmDNS.h>
+//#include <NoDelay.h>   // nonblocking delay https://www.arduino.cc/reference/en/libraries/nodelay/
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
