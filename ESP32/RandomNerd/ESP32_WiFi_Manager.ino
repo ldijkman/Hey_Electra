@@ -9,6 +9,8 @@
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload
 *********/
 
+// https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <ESPAsyncWebServer.h>            // https://github.com/me-no-dev/ESPAsyncWebServer
