@@ -1,4 +1,6 @@
 /*********
+http://electra.local
+
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
 
@@ -8,7 +10,7 @@
 
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload
   
-  added mdns dot loacal url
+  added mdns dot local URL
   should show a scan to liat all dot local urls in local network automaticly on devices webpage
   wanted a settable countdown off timer
   wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
