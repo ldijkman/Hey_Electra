@@ -38,6 +38,7 @@ http://electra.local
                                                                    https://randomnerdtutorials.com/esp8266-nodemcu-date-time-ntp-client-server-arduino
                                                                    https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
     wanted load change wifimanager.html settings from station STA mode
+    wanted add OTA over the air updates
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
