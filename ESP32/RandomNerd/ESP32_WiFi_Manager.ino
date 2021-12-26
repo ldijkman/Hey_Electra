@@ -30,6 +30,32 @@ http://electra.local
   wanted page refresh to actual switch state if state is changed on another webpage
   wanted i/o setting wifimager input field for relais i/o pin and/or status LED i/o pin
 *********/
+/*********
+http://electra.local
+    http://living.local
+         http://kitchen.local
+              http://garage.local
+                   ETCETERA!
+                   
+ Easy No Hassle home automation    
+ each swith / device its own URL with webpage
+     and each webpage should show an automaticly scanned linked list of all mDNS devices in local network
+  Rui Santos
+  Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
+  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files.
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload (turn serial monitor off else failure)
+  
+  added mdns dot local URL
+  wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
+  wanted a settable countdown off timer
+  wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
+  [x]wanted dhcp ip settting not fixed  // people do not know wat to enter
+  wanted unique Access point AP name broadcasted in the air == "esp32 wifimanager" + chipid
+  wanted set mDNS dot local url from wifimanager inputfield
+  wanted page refresh to actual switch state if state is changed on another webpage
+  wanted i/o setting wifimager input field for relais i/o pin and/or status LED i/o pin
+*********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
 
@@ -72,11 +98,11 @@ const char* mdnsdotlocalurl = "electra";    // becomes http://electra.local     
 
 
 //IPAddress localIP;
-IPAddress localIP(10, 10, 100, 110); // hardcoded
+//IPAddress localIP(10, 10, 100, 110); // hardcoded
 
 // Set your Gateway IP address
-IPAddress gateway(10, 10, 100, 1);
-IPAddress subnet(255, 255, 0, 0);
+//IPAddress gateway(10, 10, 100, 1);
+//IPAddress subnet(255, 255, 0, 0);
 
 // Timer variables
 unsigned long previousMillis = 0;
@@ -132,19 +158,19 @@ void writeFile(fs::FS &fs, const char * path, const char * message) {
 
 // Initialize WiFi
 bool initWiFi() {
-  if (ssid == "" || ip == "") {
-    Serial.println("Undefined SSID or IP address.");
+  if (ssid == "" /*|| ip == ""*/) {
+    Serial.println("Undefined SSID wrong wifiroutername or wifirouterpassword");
     return false;
   }
 
   WiFi.mode(WIFI_STA);
-  localIP.fromString(ip.c_str());
+  //localIP.fromString(ip.c_str());
 
-  if (!WiFi.config(localIP, gateway, subnet)) {
+  //if (!WiFi.config(localIP, gateway, subnet)) {
 
-    Serial.println("STA Failed to configure");
-    return false;
-  }
+ //   Serial.println("STA Failed to configure");
+  //  return false;
+ // }
   WiFi.begin(ssid.c_str(), pass.c_str());
   Serial.println("Connecting to WiFi...");
 
@@ -277,7 +303,7 @@ void setup() {
           //Serial.printf("POST[%s]: %s\n", p->name().c_str(), p->value().c_str());
         }
       }
-      request->send(200, "text/html", "<h1>Done. ESP will restart,<br> connect to your router <br>and go to IP address: " + ip + " <br>http://"+mdnsdotlocalurl+".local</h1>");
+      request->send(200, "text/html", "<h1>Done. ESP restart,<br> connect router <br>go to: " + ip + " <br>http://"+mdnsdotlocalurl+".local</h1>");
       delay(3000);
       ESP.restart();
     });
