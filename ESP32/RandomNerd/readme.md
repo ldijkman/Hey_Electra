@@ -67,6 +67,6 @@ Electra Needs a  Helping Hand!?
 
 Free!? 
 
-a penny for sharing my thoughts
+a penny for sharing my thoughts (Electra Crypto Coin ;-)
 
 http://paypal.me/LDijkman
