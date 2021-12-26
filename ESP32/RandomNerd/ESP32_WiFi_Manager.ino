@@ -39,6 +39,7 @@ http://electra.local
                                                                    https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
     wanted load change wifimanager.html settings from station STA mode
     wanted add OTA over the air updates
+    wanted sunrise sunset times or geolocation
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
