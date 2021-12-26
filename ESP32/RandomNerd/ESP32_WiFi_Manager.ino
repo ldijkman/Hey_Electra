@@ -22,6 +22,7 @@ http://electra.local
   wanted unique Access point AP name broadcasted in the air == "esp32 wifimanager" + chipid
   wanted set mDNS dot local url from wifimanager inputfield
   wanted page refresh to actual switch state if state is changed on another webpage
+  wanted i/o setting wifimager input field for relais i/o pin and/or status LED i/o pin
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
