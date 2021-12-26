@@ -26,7 +26,7 @@ http://electra.local
     wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
     wanted a settable countdown off timer
     wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
-[x] wanted dhcp ip settting not fixed  // people do not know wat to enter
+[x] wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
     wanted unique Access point AP name broadcasted in the air == "esp32 wifimanager" + chipid
     wanted set mDNS dot local url from wifimanager inputfield
     wanted page refresh to actual switch state if state is changed on another webpage
