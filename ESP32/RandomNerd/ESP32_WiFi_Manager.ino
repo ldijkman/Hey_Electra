@@ -13,6 +13,7 @@
   wanted a settable countdown off timer
   wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
   wanted dhcp ip settting not fixed
+  wanted unique Access point AP name broadcasted in the air == chipid
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
