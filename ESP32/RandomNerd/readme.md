@@ -11,6 +11,12 @@ you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32
 
 howto add and use in arduino ide => https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/
 
+upload the contents of data directory to spiffs on esp32
+
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/20211228_175205.jpg" width="80%" height="80%">
+
+upload the contents of data directory to spiffs on esp32
+
 --
 
 with human friendly mDNS dot local URL, no hard IP numbers to remember
