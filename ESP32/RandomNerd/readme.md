@@ -1,3 +1,5 @@
+Unfinished, maybe under construction
+
 # Hey Electra
 -- 
 
@@ -86,3 +88,5 @@ a penny for sharing my thoughts (Electra Crypto Coin ;-)
 http://paypal.me/LDijkman
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCDqcd2bZcqOfEN5Ld8VCRaHWL6E6_Izyf1A&usqp=CAU">
+
+Unfinished, maybe under construction
