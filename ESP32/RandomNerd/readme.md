@@ -58,6 +58,7 @@ prints to serial monitor for now => should publish refreshed on the main webpage
 auto scan list browse for mdns devices on the local network
 
 function? processor replace text %MDNSNAME% in index.html wich is in spiffs with variable mdnsdotllocalurl == defined as electra but could be kitchen living hallway etcetera
+It,s your party
  
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211228-175311_Chrome.jpg" width="40%" height="40%">
 
