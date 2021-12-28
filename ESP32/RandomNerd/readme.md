@@ -28,7 +28,6 @@ https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=e
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-074232_BonjourBrowser.jpg" width="40%" height="40%"><img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142216_Chrome.jpg" width="40%" height="40%"><img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142934_Chrome.jpg" width="40%" height="40%"><img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-145214_Chrome.jpg" width="40%" height="40%">
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211228-060348_Chrome.jpg" width="40%" height="40%">
 
 future Easy set / overvieuw timed switching, much better and more as most paid commercial programs / apps
 
@@ -52,7 +51,7 @@ prints to serial monitor for now => should publish refreshed on the main webpage
 
 auto scan list browse for mdns devices on the local network
 
-<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-151343_Chrome.jpg" width="40%" height="40%">
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211228-060348_Chrome.jpg" width="40%" height="40%">
 
 # easy just click and browse through your house garage and garden webpages;-)
 
