@@ -209,9 +209,13 @@ String processor(const String& var) {
     else {
       ledState = "OFF";
     }
-    return ledState;
+    return ledState; 
+    return String();
+  }  
+  else if(var == "MDNSNAME"){
+    return String(mdnsdotlocalurl);
   }
-  return String();
+ return String();
 }
 
 void setup() {
