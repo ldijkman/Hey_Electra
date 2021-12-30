@@ -3,6 +3,8 @@ Unfinished, maybe under construction
 # Hey Electra
 -- 
 
+wifimanager edit html page https://jsfiddle.net/luberth/4avpquhs/show
+
 modifeid version of 
 
 randomnerdtutorials ESP32: Create a Wi-Fi Manager (AsyncWebServer library)
