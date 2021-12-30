@@ -3,7 +3,11 @@ Unfinished, maybe under construction
 # Hey Electra
 -- 
 
-wifimanager edit html page https://jsfiddle.net/luberth/4avpquhs/show
+wifimanager.html edit html page online https://jsfiddle.net/luberth/4avpquhs/show
+
+index.html wifimanager edit html page online  https://jsfiddle.net/luberth/sx61b08t/show
+
+schedule.html edit html page online  https://jsfiddle.net/luberth/ow3zceyn/show/
 
 modifeid version of 
 
