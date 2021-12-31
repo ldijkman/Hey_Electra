@@ -15,9 +15,10 @@
     <div class="card-grid">
       <div class="card">
         <form action="/" method="POST">
-          <p>
+          <p><small>Wifi router name broadcasted in the air</small><br>
             <label for="ssid">SSID</label>
             <input type="text" id ="ssid" name="ssid"><br>
+            <small>Wifi router password</small><br>
             <label for="pass">Password</label>
             <input type="text" id ="pass" name="pass"><br>
             <label for="ip">IP Address</label>
@@ -27,11 +28,11 @@
             <input type="text" id ="mdns" name="mdns" value="living"  oninput='document.getElementById("url").value="http://"+document.getElementById("mdns").value+".local";'><br>
  
 <script>document.getElementById("url").value="http://"+document.getElementById("mdns").value+".local";</script>
-           <label for="relaispin">Relais pin</label>
+           <label for="relaispin">Relais pin GPIO </label>
             <input type="text" id ="relaispin" name="relaispin" value="5"><br>
             <label for="ntptime">NTP time server</label>
             <input type="text" id ="ntptime" name="ntptime" value="http://time.google.com"><br>
-            <label for="ntptimeoffset">time offset</label>
+            <label for="ntptimeoffset">Time offset</label>
             <input type="text" id ="ntptimeoffset" name="ntptimeoffset" value="2"><br>
             <input type ="submit" value ="Submit">
           </p>
@@ -40,5 +41,12 @@
     </div>
   </div>
   <script src="script.js"></script>
+  Edit html pages online<br>
+  wifimanager.html <a href="https://jsfiddle.net/luberth/4avpquhs/show">https://jsfiddle.net/luberth/4avpquhs/show</a><br>
+index.html <a href="https://jsfiddle.net/luberth/sx61b08t/show"> https://jsfiddle.net/luberth/sx61b08t/show</a><br>
+schedule.html <a href="https://jsfiddle.net/luberth/ow3zceyn/show/">https://jsfiddle.net/luberth/ow3zceyn/show/</a><br>
+<br><br><br>
+<a href="https://github.com/ldijkman/Hey_Electra/tree/main/ESP32/RandomNerd" target="Hey_Electra">https://github.com/ldijkman/Hey_Electra/tree/main/ESP32/RandomNerd</a><br><br>
+OTA over the Air Update
 </body>
 </html>
