@@ -54,7 +54,8 @@ started with the example from
 #include <AsyncTCP.h>                     // https://github.com/me-no-dev/AsyncTCP
 #include "SPIFFS.h"
 #include <ESPmDNS.h>
-//#include <NoDelay.h>   // nonblocking delay https://www.arduino.cc/reference/en/libraries/nodelay/
+//#include <NoDelay.h>                   // nonblocking delay https://www.arduino.cc/reference/en/libraries/nodelay/
+#include <AsyncElegantOTA.h>             // https://github.com/ayushsharma82/AsyncElegantOTA
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -256,6 +257,8 @@ void setup() {
       digitalWrite(ledPin, LOW);
       request->send(SPIFFS, "/index.html", "text/html", false, processor);
     });
+      
+    AsyncElegantOTA.begin(&server);    // Start ElegantOTA
     server.begin();
   }
   else {
