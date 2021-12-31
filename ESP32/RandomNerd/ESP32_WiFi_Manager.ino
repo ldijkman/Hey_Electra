@@ -318,7 +318,7 @@ unsigned long startmillis = 0;
 
 void loop() {
 
-
+/*
   if (millis() - startmillis >= 10000) {    // non blocking delay 10 seconds
     startmillis = millis();
     
@@ -349,7 +349,7 @@ void loop() {
     Serial.println("");
 
   }
-
+*/
 }
 
 
