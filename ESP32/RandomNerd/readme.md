@@ -42,12 +42,13 @@ https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=e
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-074232_BonjourBrowser.jpg" width="40%" height="40%"><img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142216_Chrome.jpg" width="40%" height="40%"><img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-142934_Chrome.jpg" width="40%" height="40%"><img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-145214_Chrome.jpg" width="40%" height="40%">
 
+<img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211231-183539_Chrome.jpg" width="50%" height="50%">
 
-future Easy set / overvieuw timed switching, much better and more as most paid commercial programs / apps
+future Easy set / overview timed switching, much better and more as most paid commercial programs / apps
 
 <img src="https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/Screenshot_20211226-145558_Chrome.jpg">
 
-future Easy set / overvieuw timed switching, much better and more as most paid commercial programs / apps
+future Easy set / overview timed switching, much better and more as most paid commercial programs / apps
 
 Electra shortcut icon on android phone start screen
 
