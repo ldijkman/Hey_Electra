@@ -1,6 +1,8 @@
 Unfinished, maybe under construction
 
 # Hey Electra
+
+Simple is better home automation
 -- 
 
 wifimanager.html edit html page online https://jsfiddle.net/luberth/4avpquhs/show
