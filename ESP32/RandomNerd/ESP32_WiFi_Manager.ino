@@ -310,8 +310,8 @@ void setup() {
           //Serial.printf("POST[%s]: %s\n", p->name().c_str(), p->value().c_str());
         }
       }
-      request->send(200, "text/html", "<h1>Done. ESP restart,<br> connect router <br>go to: " + ip + " <br><a href="+mdnsdotlocalurl+">http://"+mdnsdotlocalurl+".local</a></h1>");
-     delay(3000);
+     request->send(200, "text/html", "<h1>Done. ESP restart,<br> connect router <br>go to: " + ip + " <br><a href=\"http://"+mdnsdotlocalurl+">http://"+mdnsdotlocalurl+".local</a></h1>");
+      delay(3000);
       ESP.restart();
     });
     server.begin();
