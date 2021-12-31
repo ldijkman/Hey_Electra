@@ -39,7 +39,8 @@ started with the example from
                                                                    https://randomnerdtutorials.com/esp8266-nodemcu-date-time-ntp-client-server-arduino
                                                                    https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
     wanted load change wifimanager.html settings from station STA mode
-    wanted add OTA over the air updates
+    wanted add OTA over the air updates         
+                                        https://randomnerdtutorials.com/esp32-ota-over-the-air-vs-code/
     wanted sunrise sunset times or geolocation
     wanted add available wifi broadcaster in the air ssid scan to wifimanager.html
     wanted relais http://url_or_ip/status status html or text url webpage 0 or 1 for external programs status display
