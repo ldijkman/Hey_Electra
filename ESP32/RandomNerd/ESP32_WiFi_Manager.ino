@@ -29,7 +29,7 @@ started with the example from
             https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/ESP32_mDNS_list.ino
     wanted a settable countdown off timer is this called inching switch
     wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
-[x] wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
+[x]  wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
     wanted unique Access point AP name broadcasted in the air == "esp32 wifimanager" + chipid
     wanted set mDNS dot local url from wifimanager inputfield
     wanted page refresh to actual switch state if state is changed on another webpage    ajax or websockets?
@@ -39,11 +39,13 @@ started with the example from
                                                                    https://randomnerdtutorials.com/esp8266-nodemcu-date-time-ntp-client-server-arduino
                                                                    https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
     wanted load change wifimanager.html settings from station STA mode
-    wanted add OTA over the air updates         
+[x]  wanted add OTA over the air updates         
                                         https://randomnerdtutorials.com/esp32-ota-over-the-air-vs-code/
     wanted sunrise sunset times or geolocation
     wanted add available wifi broadcaster in the air ssid scan to wifimanager.html
-    wanted relais http://url_or_ip/status status html or text url webpage 0 or 1 for external programs status display
+[x] wanted relais http://url_or_ip/status status html or text url webpage 0 or 1 for external programs status display
+          http:// url or ip  /status   returns text 0 ro 1 for remote monitoring
+    
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
@@ -256,6 +258,12 @@ void setup() {
     server.on("/off", HTTP_GET, [](AsyncWebServerRequest * request) {
       digitalWrite(ledPin, LOW);
       request->send(SPIFFS, "/index.html", "text/html", false, processor);
+    });
+      
+    //  /status returns text 0 ro 1 for remote monitoring
+    server.on("/status", HTTP_GET, [](AsyncWebServerRequest * request) {
+      int readval=digitalRead(ledPin);
+      request->send(200, "text/txt", String(readval));
     });
       
     AsyncElegantOTA.begin(&server);    // Start ElegantOTA
