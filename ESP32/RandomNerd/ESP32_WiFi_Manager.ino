@@ -266,6 +266,24 @@ void setup() {
       request->send(200, "text/txt", String(readval));
     });
       
+    server.on("/list", HTTP_GET, [](AsyncWebServerRequest * request) {    // /list files in spiffs on webpage
+      if (!SPIFFS.begin(true)) {
+        Serial.println("An Error has occurred while mounting SPIFFS");
+        return;
+      }
+
+      File root = SPIFFS.open("/");
+      File file = root.openNextFile();
+      String str = "";
+      while (file) {
+        str += " / ";
+        str += file.name();
+        str += "\r\n";
+        file = root.openNextFile();
+      }
+      request->send(200, "text/txt", str);
+    });
+      
     AsyncElegantOTA.begin(&server);    // Start ElegantOTA
     server.begin();
   }
