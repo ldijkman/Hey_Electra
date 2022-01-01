@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ESP Wi-Fi Manager</title>
+  <title>Hey Electra, ESP Wi-Fi Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:,">
+  <!-- turn off == slow && off no use if we are n AP accesspont mode
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  -->
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="topnav">
-    <h1>ESP Wi-Fi Manager</h1>
+    <h1>Hey Electra, ESP Wi-Fi Manager</h1>
   </div>
   <div class="content">
     <div class="card-grid">
@@ -21,15 +23,33 @@
             <small>Wifi router password</small><br>
             <label for="pass">Password</label>
             <input type="text" id ="pass" name="pass"><br>
+            
             <label for="ip">IP Address</label>
-            <input type="text" id ="ip" name="ip" value="no use dhcp"><br>
+            <input type="text" id ="ip" name="ip" value="NO we use DHCP"><br>
+            
+            <label for="gateway">Gateway</label>
+            <input type="text" id ="gateway" name="gateway" value="192.168.178.1"><br>
+            
+            <label for="subnet">Subnet</label>
+            <input type="text" id ="subnet" name="sbnet" value="255.255.255.0"><br>
+            
             <label for="mdns">mDNS URL </label><input type="button" id ="url" name="mdns" ><br>
             <label for="mdns">mDNS Address </label>
             <input type="text" id ="mdns" name="mdns" value="living"  oninput='document.getElementById("url").value="http://"+document.getElementById("mdns").value+".local";'><br>
  
 <script>document.getElementById("url").value="http://"+document.getElementById("mdns").value+".local";</script>
-           <label for="relaispin">Relais pin GPIO </label>
+
+           <label for="relaispin">Relais GPIO </label>
             <input type="text" id ="relaispin" name="relaispin" value="5"><br>
+            
+              <label for="statusledpin">Status LED GPIO </label>
+            <input type="text" id ="statusledpin" name="statusledpin" value="8"><br>
+            
+              <label for="buttonpin">Button GPIO </label>
+            <input type="text" id ="buttonpin" name="buttonpin" value="3"><br>
+            
+            
+            
             <label for="ntptime">NTP time server</label>
             <input type="text" id ="ntptime" name="ntptime" value="http://time.google.com"><br>
             <label for="ntptimeoffset">Time offset</label>
@@ -47,6 +67,6 @@ index.html <a href="https://jsfiddle.net/luberth/sx61b08t/show"> https://jsfiddl
 schedule.html <a href="https://jsfiddle.net/luberth/ow3zceyn/show/">https://jsfiddle.net/luberth/ow3zceyn/show/</a><br>
 <br><br><br>
 <a href="https://github.com/ldijkman/Hey_Electra/tree/main/ESP32/RandomNerd" target="Hey_Electra">https://github.com/ldijkman/Hey_Electra/tree/main/ESP32/RandomNerd</a><br><br>
-OTA over the Air Update
+OTA over the Air Update => on index.hml
 </body>
 </html>
