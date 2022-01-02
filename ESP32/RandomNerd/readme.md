@@ -100,6 +100,14 @@ http://paypal.me/LDijkman
 
 Unfinished, maybe under construction
 
+# like next, and dont like it
+
+do not like that it has no usb connection
+
+Needs an FTDI programmer at3.3v or esp01 programmer with some wires
+
+
+
 ESP32 relay module 90...250~VAC
 
 
