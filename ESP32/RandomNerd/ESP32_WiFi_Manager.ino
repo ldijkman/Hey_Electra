@@ -1,6 +1,5 @@
 /*********
-wifimanager post from config page
-/?ssid=&pass=&dhcp=on&mdns=living&relaispin=5&statusledpin=8&buttonpin=3&ntptime=http%3A%2F%2Ftime.google.com&ntptimeoffset=0
+
 
 http://electra.local
     http://living.local
@@ -15,15 +14,10 @@ http://electra.local
  
  each swith / device its own human friendly URL with webpage
      and each webpage should show an automaticly scanned linked list of all mDNS URL's devices in local network
-
-
 started with the example from 
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
-
   
-
-
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload (turn serial monitor off else failure)
     howto add to Arduino IDE and use spiffs upload tool  https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/
   
@@ -87,7 +81,7 @@ const char* mdnsPath = "/mdns.txt";
 const char* relaispinPath = "/relaispin.txt";
 
 //next should become an input field for mdns dot local name in wifimanager
-const char* mdnsdotlocalurl = "electra";    // becomes http://electra.local     give each device a unique name
+String mdnsdotlocalurl = "electra";    // becomes http://electra.local     give each device a unique name
 // const char* mdnsdotlocalurl = "living";  // becomes http://living.local      give each device a unique name
 // const char* mdnsdotlocalurl = "kitchen"; // becomes http://kitchen.local     give each device a unique name
 // const char* mdnsdotlocalurl = "garage";  // becomes http://garage.local      give each device a unique name
@@ -193,7 +187,7 @@ bool initWiFi() {
 
   Serial.println(WiFi.localIP());
 
-  if (!MDNS.begin(mdnsdotlocalurl)) {
+  if (!MDNS.begin(mdnsdotlocalurl.c_str())) {
     Serial.println("Error setting up MDNS responder!");
     while (1) {
       delay(1000);
@@ -240,9 +234,11 @@ void setup() {
   ssid = readFile(SPIFFS, ssidPath);
   pass = readFile(SPIFFS, passPath);
   ip = readFile(SPIFFS, ipPath);
+  mdnsdotlocalurl = readFile(SPIFFS, mdnsPath);
   Serial.println(ssid);
   Serial.println(pass);
   Serial.println(ip);
+  Serial.println(mdnsdotlocalurl);
 
   if (initWiFi()) {
     // Route for root / web page
@@ -336,6 +332,15 @@ void setup() {
             // Write file to save value
             writeFile(SPIFFS, ipPath, ip.c_str());
           }
+           // HTTP POST mdns value
+          if (p->name() == PARAM_INPUT_4) {
+            mdnsdotlocalurl = p->value().c_str();
+            Serial.print("mdnsdotlocalurl Address set to: ");
+            Serial.println(mdnsdotlocalurl);
+            // Write file to save value
+            writeFile(SPIFFS, mdnsPath, mdnsdotlocalurl.c_str());
+          }
+          
           //Serial.printf("POST[%s]: %s\n", p->name().c_str(), p->value().c_str());
         }
       }
@@ -356,9 +361,7 @@ void loop() {
     startmillis = millis();
     
     browseService("http", "tcp");
-
     Serial.println("scan start");
-
     // WiFi.scanNetworks will return the number of networks found
     int n = WiFi.scanNetworks();
     Serial.println("scan done");
@@ -380,7 +383,6 @@ void loop() {
       }
     }
     Serial.println("");
-
   }
 */
 }
@@ -414,4 +416,3 @@ void browseService(const char * service, const char * proto){
     }
     Serial.println();
 }
-
