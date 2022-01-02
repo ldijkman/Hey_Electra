@@ -106,5 +106,24 @@ ESP32 relay module 90...250~VAC
 
 ![AC90-250V-1-CH-ESP32-Relay-Development-Board-Onboard-ESP32-WROOM-32E-WiFi-BLE-Module-RST jpg_Q90](https://user-images.githubusercontent.com/45427770/147869576-b0d2661a-d553-4a80-832f-896d3b2ce9ca.jpg)
 
-
+AC90-250V 1 CH ESP32 Relay Development Board Onboard ESP32-WROOM-32E WiFi BLE Module RST IO0 Button Relay Module
+"Features
+1: Widely used
+2: Suitable for ESP32 secondary learning, smart home wireless control and other occasions.
+3: Simple and easy to understand
+4: Onboard ESP32 module RST reset button and IO0 programmable button;
+5: Longer relay life
+product description
+AC-powered ESP32 single relay development board equipped with ESP32-WROOM-32E
+WiFi&BLE module, all I/0 ports are led out, support AC90-250V power supply mode. Suitable for ESP32 secondary development learning, smart home wireless control and other occasions.
+Features
+1. On-board mature and stable ESP32-WROOM-32E module, large capacity 4M Byte Flash;
+2. The I/O port and UART program download port of the ESP32 module are all led out to facilitate secondary development;
+3. Onboard AC-DC switching power supply module, power supply mode supports AC90-250V;
+4. Onboard ESP32 module RST reset button and lO0 programmable button;
+5. ESP32 supports the use of Ad IDE development tools and provides reference programs in the Ad development environment;
+6, Onboard 1 5V relay, output switch signal, suitable for controlling loads within AC 250V/DC30V;
+7. Onboard power indicator, 1 programmable LED and relay indicator.
+Package included：
+1*ESP32 Single Relay Development Board
 
