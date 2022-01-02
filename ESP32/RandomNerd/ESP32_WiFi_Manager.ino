@@ -415,4 +415,11 @@ void browseService(const char * service, const char * proto){
         }
     }
     Serial.println();
+
+
+// got it working???
+// share a video link https://github.com/ldijkman/Hey_Electra/discussions
+// http://paypal.me/LDijkman
 }
+
+
