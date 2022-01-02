@@ -1,4 +1,7 @@
 /*********
+wifimanager post from config page
+/?ssid=&pass=&dhcp=on&mdns=living&relaispin=5&statusledpin=8&buttonpin=3&ntptime=http%3A%2F%2Ftime.google.com&ntptimeoffset=0
+
 http://electra.local
     http://living.local
          http://kitchen.local
