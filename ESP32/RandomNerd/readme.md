@@ -99,3 +99,7 @@ http://paypal.me/LDijkman
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCDqcd2bZcqOfEN5Ld8VCRaHWL6E6_Izyf1A&usqp=CAU">
 
 Unfinished, maybe under construction
+
+ESP32 relay module 230VAC
+
+<img src="https://ae01.alicdn.com/kf/H927cbc90657c4d038f9dcb7e0d9175d2a/AC-90-250V-ESP32-WiFi-Bluetooth-Ble-Single-Relay-Module-ESP32-Development-Board-ESP32-WROOM-32E.jpg_220x220xz.jpg_.webp">
