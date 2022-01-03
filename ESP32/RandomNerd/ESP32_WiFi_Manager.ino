@@ -52,28 +52,26 @@
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
 
-// Search for parameter in HTTP POST request
-const char* PARAM_INPUT_1 = "ssid";
-const char* PARAM_INPUT_2 = "pass";
-const char* PARAM_INPUT_3 = "ip";
-const char* PARAM_INPUT_4 = "mdns";
-const char* PARAM_INPUT_5 = "relaispin";
-const char* PARAM_INPUT_6 = "dhcp";
+
+
 
 //Variables to save values from HTML form
 String ssid;
 String pass;
 String ip;
+String gateway;
+String subnet;
 String mdns;
 String dhcpcheck;
 String relaispin;
-String gateway;
-String subnet;
+
 
 // File paths to save input values permanently
 const char* ssidPath = "/ssid.txt";
 const char* passPath = "/pass.txt";
 const char* ipPath = "/ip.txt";
+const char* gatewayPath = "/gateway.txt";
+const char* subnetPath = "/subnet.txt";
 const char* mdnsPath = "/mdns.txt";
 const char* relaispinPath = "/relaispin.txt";
 const char* dhcpcheckPath = "/dhcpcheck.txt";
@@ -90,9 +88,9 @@ String mdnsdotlocalurl = "electra";    // becomes http://electra.local     give 
 // windows ?
 
 
-IPAddress localIP(192,168,178,1);
-IPAddress gatewayIP(192,167,178,1);
-IPAddress subnetMask(255,255,255,0);
+IPAddress localIP(0, 0, 0, 0);
+IPAddress gatewayIP(0, 0, 0, 0);
+IPAddress subnetMask(0, 0, 0, 0);
 
 
 
@@ -166,7 +164,6 @@ bool initWiFi() {
     gatewayIP.fromString(gateway.c_str());
     subnetMask.fromString(subnet.c_str());
 
-   
     if (!WiFi.config(localIP, gatewayIP, subnetMask)) {
       Serial.println("STA Failed to configure");
       return false;
@@ -234,15 +231,20 @@ void setup() {
 
   // Load values saved in SPIFFS
   ssid = readFile(SPIFFS, ssidPath);
-  pass = readFile(SPIFFS, passPath);
-  ip = readFile(SPIFFS, ipPath);
-  mdnsdotlocalurl = readFile(SPIFFS, mdnsPath);
-  dhcpcheck = readFile(SPIFFS, dhcpcheckPath);
   Serial.println(ssid);
+  pass = readFile(SPIFFS, passPath);
   Serial.println(pass);
+  ip = readFile(SPIFFS, ipPath);
   Serial.println(ip);
+  gateway = readFile(SPIFFS, gatewayPath);
+  Serial.println(gateway);
+  subnet = readFile(SPIFFS, subnetPath);
+  Serial.println(subnet);
+  mdnsdotlocalurl = readFile(SPIFFS, mdnsPath);
   Serial.println(mdnsdotlocalurl);
+  dhcpcheck = readFile(SPIFFS, dhcpcheckPath);
   Serial.println(dhcpcheck);
+
 
   if (initWiFi()) {
     // Route for root / web page
@@ -313,6 +315,7 @@ void setup() {
         AsyncWebParameter* p = request->getParam(i);
         if (p->isPost()) {
           // HTTP POST ssid value
+          const char* PARAM_INPUT_1 = "ssid";                  // Search for parameter in HTTP POST request
           if (p->name() == PARAM_INPUT_1) {
             ssid = p->value().c_str();
             Serial.print("SSID set to: ");
@@ -321,6 +324,7 @@ void setup() {
             writeFile(SPIFFS, ssidPath, ssid.c_str());
           }
           // HTTP POST pass value
+          const char* PARAM_INPUT_2 = "pass";                 // Search for parameter in HTTP POST request
           if (p->name() == PARAM_INPUT_2) {
             pass = p->value().c_str();
             Serial.print("Password set to: ");
@@ -329,30 +333,49 @@ void setup() {
             writeFile(SPIFFS, passPath, pass.c_str());
           }
           // HTTP POST ip value
+          const char* PARAM_INPUT_3 = "ip";                   // Search for parameter in HTTP POST request
           if (p->name() == PARAM_INPUT_3) {
-            writeFile(SPIFFS, dhcpcheckPath, "off"); //dhcp unchecked . if we recieve post with ip set dhcpcheck.txt file to off
+            writeFile(SPIFFS, dhcpcheckPath, "off");          //dhcp unchecked . if we recieve post with ip set dhcpcheck.txt file to off
             ip = p->value().c_str();
             Serial.print("IP Address set to: ");
             Serial.println(ip);
-            // Write file to save value
-            writeFile(SPIFFS, ipPath, ip.c_str());
+            writeFile(SPIFFS, ipPath, ip.c_str());            // Write file to save value
+          }
+          // HTTP POST gateway value
+          const char* PARAM_INPUT_4 = "gateway";              // Search for parameter in HTTP POST request
+          if (p->name() == PARAM_INPUT_4) {
+            gateway = p->value().c_str();
+            Serial.print("gateway Address set to: ");
+            Serial.println(gateway);
+            writeFile(SPIFFS, gatewayPath, gateway.c_str());          // Write file to save value
+          }
+
+          // HTTP POST subnet value
+          const char* PARAM_INPUT_5 = "subnet";               // Search for parameter in HTTP POST request
+          if (p->name() == PARAM_INPUT_5) {
+            subnet = p->value().c_str();
+            Serial.print("subnet Address set to: ");
+            Serial.println(subnet);
+            writeFile(SPIFFS, subnetPath, subnet.c_str());            // Write file to save value
           }
           // HTTP POST mdns value
-          if (p->name() == PARAM_INPUT_4) {
+          const char* PARAM_INPUT_6 = "mdns";                 // Search for parameter in HTTP POST request
+          if (p->name() == PARAM_INPUT_6) {
             mdnsdotlocalurl = p->value().c_str();
             Serial.print("mdnsdotlocalurl Address set to: ");
             Serial.println(mdnsdotlocalurl);
-            // Write file to save value
-            writeFile(SPIFFS, mdnsPath, mdnsdotlocalurl.c_str());
+            writeFile(SPIFFS, mdnsPath, mdnsdotlocalurl.c_str());            // Write file to save value
           }
           // HTTP POST dhcp value on
-          if (p->name() == PARAM_INPUT_6) {
+          const char* PARAM_INPUT_7 = "dhcp";                // Search for parameter in HTTP POST request
+          if (p->name() == PARAM_INPUT_7) {
             dhcpcheck = p->value().c_str();
             Serial.print("dhcpcheck set to: ");
             Serial.println(dhcpcheck);
-            // Write file to save value
-            writeFile(SPIFFS, dhcpcheckPath, dhcpcheck.c_str());
+            writeFile(SPIFFS, dhcpcheckPath, dhcpcheck.c_str());            // Write file to save value
           }
+
+
 
           //Serial.printf("POST[%s]: %s\n", p->name().c_str(), p->value().c_str());
         }
