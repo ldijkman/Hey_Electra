@@ -1,26 +1,20 @@
 /*********
-
-
   http://electra.local
     http://living.local
          http://kitchen.local
               http://garage.local
                    ETCETERA!
-
   Easy No Hassle home automation
   BrainPain free home automation
   Blondes friendly home automation
   Home Automation for Dummies
-
   each swith / device its own human friendly URL with webpage
      and each webpage should show an automaticly scanned linked list of all mDNS URL's devices in local network
   started with the example from
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
-
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload (turn serial monitor off else failure)
     howto add to Arduino IDE and use spiffs upload tool  https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/
-
   added mdns dot local URL
     wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
             https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/ESP32_mDNS_list.ino
@@ -42,7 +36,6 @@
     wanted add available wifi broadcaster in the air ssid scan to wifimanager.html
   [x] wanted relais http://url_or_ip/status status html or text url webpage 0 or 1 for external programs status display
           http:// url or ip  /status   returns text 0 ro 1 for remote monitoring
-
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
@@ -94,14 +87,11 @@ String mdnsdotlocalurl = "electra";    // becomes http://electra.local     give 
 // my raspberry pi does mdns!
 // windows ?
 
-// made it DHCP
-//IPAddress localIP;
-//IPAddress localIP(10, 10, 100, 110); // hardcoded
 
-// Set your Gateway IP address
-//IPAddress gateway(10, 10, 100, 1);
-//IPAddress subnet(255, 255, 0, 0);
-// made it DHCP
+IPAddress localIP;
+IPAddress gatewayIP;
+IPAddress subnetMask;
+
 
 
 // Timer variables
@@ -166,18 +156,21 @@ bool initWiFi() {
   WiFi.mode(WIFI_STA);
 
   if (dhcpcheck == "on") {
-
+    // dhcp
 
   } else {
-    // made it DHCP
-    //localIP.fromString(ip.c_str());
+    // fixed ip
+    localIP.fromString(ip.c_str());
+    gatewayIP.fromString(gateway.c_str());
+    subnetMask.fromString(subnet.c_str());
 
-    //if (!WiFi.config(localIP, gateway, subnet)) {
-
-    //   Serial.println("STA Failed to configure");
-    //  return false;
-    // }
+   
+    if (!WiFi.config(localIP, gatewayIP, subnetMask)) {
+      Serial.println("STA Failed to configure");
+      return false;
+    }
   }
+
   WiFi.begin(ssid.c_str(), pass.c_str());
   Serial.println("Connecting to WiFi...");
 
@@ -334,8 +327,8 @@ void setup() {
             writeFile(SPIFFS, passPath, pass.c_str());
           }
           // HTTP POST ip value
-          if (p->name() == PARAM_INPUT_3) {  
-             writeFile(SPIFFS, dhcpcheckPath, "off"); //dhcp unchecked . if we recieve post with ip set dhcpcheck.txt file to off
+          if (p->name() == PARAM_INPUT_3) {
+            writeFile(SPIFFS, dhcpcheckPath, "off"); //dhcp unchecked . if we recieve post with ip set dhcpcheck.txt file to off
             ip = p->value().c_str();
             Serial.print("IP Address set to: ");
             Serial.println(ip);
@@ -377,7 +370,6 @@ void loop() {
   /*
     if (millis() - startmillis >= 10000) {    // non blocking delay 10 seconds
       startmillis = millis();
-
       browseService("http", "tcp");
       Serial.println("scan start");
       // WiFi.scanNetworks will return the number of networks found
@@ -435,9 +427,7 @@ void browseService(const char * service, const char * proto) {
   Serial.println();
 
 
-// got it working???
-// share a video link https://github.com/ldijkman/Hey_Electra/discussions
-// http://paypal.me/LDijkman
+  // got it working???
+  // share a video link https://github.com/ldijkman/Hey_Electra/discussions
+  // http://paypal.me/LDijkman
 }
-
-
