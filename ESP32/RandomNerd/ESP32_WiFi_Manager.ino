@@ -67,6 +67,8 @@ String ip;
 String mdns;
 String dhcpcheck;
 String relaispin;
+String gateway;
+String subnet;
 
 // File paths to save input values permanently
 const char* ssidPath = "/ssid.txt";
@@ -88,9 +90,9 @@ String mdnsdotlocalurl = "electra";    // becomes http://electra.local     give 
 // windows ?
 
 
-IPAddress localIP;
-IPAddress gatewayIP;
-IPAddress subnetMask;
+IPAddress localIP(192,168,178,1);
+IPAddress gatewayIP(192,167,178,1);
+IPAddress subnetMask(255,255,255,0);
 
 
 
