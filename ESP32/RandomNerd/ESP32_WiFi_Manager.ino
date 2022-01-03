@@ -1,48 +1,48 @@
 /*********
 
 
-http://electra.local
+  http://electra.local
     http://living.local
          http://kitchen.local
               http://garage.local
                    ETCETERA!
-                   
- Easy No Hassle home automation  
- BrainPain free home automation 
- Blondes friendly home automation
- Home Automation for Dummies
- 
- each swith / device its own human friendly URL with webpage
+
+  Easy No Hassle home automation
+  BrainPain free home automation
+  Blondes friendly home automation
+  Home Automation for Dummies
+
+  each swith / device its own human friendly URL with webpage
      and each webpage should show an automaticly scanned linked list of all mDNS URL's devices in local network
-started with the example from 
+  started with the example from
   Rui Santos
   Complete instructions at https://RandomNerdTutorials.com/esp32-wi-fi-manager-asyncwebserver/
-  
+
   you need to upload the data directory to spiffs => Arduino IDE => Tools => ESP32 Sketch Data Upload (turn serial monitor off else failure)
     howto add to Arduino IDE and use spiffs upload tool  https://randomnerdtutorials.com/install-esp32-filesystem-uploader-arduino-ide/
-  
+
   added mdns dot local URL
     wanted should show a scan to list all mdns devices dot local urls in local network automaticly on devices webpage
             https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/ESP32_mDNS_list.ino
     wanted a settable countdown off timer is this called inching switch
     wanted easy set/overview timed settings webpage in this device https://jsfiddle.net/luberth/ow3zceyn/show/
-[x]  wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
+  [x]  wanted dhcp ip settting not fixed  // Blondes do not know wat to enter  == solved
     wanted unique Access point AP name broadcasted in the air == "esp32 wifimanager" + chipid
     wanted set mDNS dot local url from wifimanager inputfield
     wanted page refresh to actual switch state if state is changed on another webpage    ajax or websockets?
     wanted i/o setting wifimager input field for relais i/o pin and/or status LED i/o pin
-    wanted ntp time server input field in wifimanager            
+    wanted ntp time server input field in wifimanager
     wanted ntp time server offset input field in wifimanager
                                                                    https://randomnerdtutorials.com/esp8266-nodemcu-date-time-ntp-client-server-arduino
                                                                    https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
     wanted load change wifimanager.html settings from station STA mode
-[x]  wanted add OTA over the air updates         
+  [x]  wanted add OTA over the air updates
                                         https://randomnerdtutorials.com/esp32-ota-over-the-air-vs-code/
     wanted sunrise sunset times or geolocation
     wanted add available wifi broadcaster in the air ssid scan to wifimanager.html
-[x] wanted relais http://url_or_ip/status status html or text url webpage 0 or 1 for external programs status display
+  [x] wanted relais http://url_or_ip/status status html or text url webpage 0 or 1 for external programs status display
           http:// url or ip  /status   returns text 0 ro 1 for remote monitoring
-    
+
 *********/
 
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/RandomNerd/ESP32_WiFi_Manager.ino
@@ -65,12 +65,14 @@ const char* PARAM_INPUT_2 = "pass";
 const char* PARAM_INPUT_3 = "ip";
 const char* PARAM_INPUT_4 = "mdns";
 const char* PARAM_INPUT_5 = "relaispin";
+const char* PARAM_INPUT_6 = "dhcp";
 
 //Variables to save values from HTML form
 String ssid;
 String pass;
 String ip;
 String mdns;
+String dhcpcheck;
 String relaispin;
 
 // File paths to save input values permanently
@@ -79,25 +81,26 @@ const char* passPath = "/pass.txt";
 const char* ipPath = "/ip.txt";
 const char* mdnsPath = "/mdns.txt";
 const char* relaispinPath = "/relaispin.txt";
+const char* dhcpcheckPath = "/dhcpcheck.txt";
 
 //next should become an input field for mdns dot local name in wifimanager
 String mdnsdotlocalurl = "electra";    // becomes http://electra.local     give each device a unique name
 // const char* mdnsdotlocalurl = "living";  // becomes http://living.local      give each device a unique name
 // const char* mdnsdotlocalurl = "kitchen"; // becomes http://kitchen.local     give each device a unique name
 // const char* mdnsdotlocalurl = "garage";  // becomes http://garage.local      give each device a unique name
-// on android phone use the bonjour browser app to see the .local devices on the network 
+// on android phone use the bonjour browser app to see the .local devices on the network
 // https://play.google.com/store/apps/details?id=de.wellenvogel.bonjourbrowser&hl=en&gl=US
 // apple does mdns?
-// my raspberry pi does mdns! 
+// my raspberry pi does mdns!
 // windows ?
 
 // made it DHCP
-  //IPAddress localIP;
-  //IPAddress localIP(10, 10, 100, 110); // hardcoded
+//IPAddress localIP;
+//IPAddress localIP(10, 10, 100, 110); // hardcoded
 
-  // Set your Gateway IP address
-  //IPAddress gateway(10, 10, 100, 1);
-  //IPAddress subnet(255, 255, 0, 0);
+// Set your Gateway IP address
+//IPAddress gateway(10, 10, 100, 1);
+//IPAddress subnet(255, 255, 0, 0);
 // made it DHCP
 
 
@@ -161,16 +164,20 @@ bool initWiFi() {
   }
 
   WiFi.mode(WIFI_STA);
-    
-  // made it DHCP
-  //localIP.fromString(ip.c_str());
 
-  //if (!WiFi.config(localIP, gateway, subnet)) {
+  if (dhcpcheck == "on") {
 
- //   Serial.println("STA Failed to configure");
-  //  return false;
- // }
-    
+
+  } else {
+    // made it DHCP
+    //localIP.fromString(ip.c_str());
+
+    //if (!WiFi.config(localIP, gateway, subnet)) {
+
+    //   Serial.println("STA Failed to configure");
+    //  return false;
+    // }
+  }
   WiFi.begin(ssid.c_str(), pass.c_str());
   Serial.println("Connecting to WiFi...");
 
@@ -211,13 +218,13 @@ String processor(const String& var) {
     else {
       ledState = "OFF";
     }
-    return ledState; 
+    return ledState;
     return String();
-  }  
-  else if(var == "MDNSNAME"){
+  }
+  else if (var == "MDNSNAME") {
     return String(mdnsdotlocalurl);
   }
- return String();
+  return String();
 }
 
 void setup() {
@@ -235,10 +242,12 @@ void setup() {
   pass = readFile(SPIFFS, passPath);
   ip = readFile(SPIFFS, ipPath);
   mdnsdotlocalurl = readFile(SPIFFS, mdnsPath);
+  dhcpcheck = readFile(SPIFFS, dhcpcheckPath);
   Serial.println(ssid);
   Serial.println(pass);
   Serial.println(ip);
   Serial.println(mdnsdotlocalurl);
+  Serial.println(dhcpcheck);
 
   if (initWiFi()) {
     // Route for root / web page
@@ -258,13 +267,13 @@ void setup() {
       digitalWrite(ledPin, LOW);
       request->send(SPIFFS, "/index.html", "text/html", false, processor);
     });
-      
+
     //  /status returns text 0 ro 1 for remote monitoring
     server.on("/status", HTTP_GET, [](AsyncWebServerRequest * request) {
-      int readval=digitalRead(ledPin);
+      int readval = digitalRead(ledPin);
       request->send(200, "text/txt", String(readval));
     });
-      
+
     server.on("/list", HTTP_GET, [](AsyncWebServerRequest * request) {    // /list files in spiffs on webpage
       if (!SPIFFS.begin(true)) {
         Serial.println("An Error has occurred while mounting SPIFFS");
@@ -282,7 +291,7 @@ void setup() {
       }
       request->send(200, "text/txt", str);
     });
-      
+
     AsyncElegantOTA.begin(&server);    // Start ElegantOTA
     server.begin();
   }
@@ -325,14 +334,15 @@ void setup() {
             writeFile(SPIFFS, passPath, pass.c_str());
           }
           // HTTP POST ip value
-          if (p->name() == PARAM_INPUT_3) {
+          if (p->name() == PARAM_INPUT_3) {  
+             writeFile(SPIFFS, dhcpcheckPath, "off"); //dhcp unchecked . if we recieve post with ip set dhcpcheck.txt file to off
             ip = p->value().c_str();
             Serial.print("IP Address set to: ");
             Serial.println(ip);
             // Write file to save value
             writeFile(SPIFFS, ipPath, ip.c_str());
           }
-           // HTTP POST mdns value
+          // HTTP POST mdns value
           if (p->name() == PARAM_INPUT_4) {
             mdnsdotlocalurl = p->value().c_str();
             Serial.print("mdnsdotlocalurl Address set to: ");
@@ -340,11 +350,19 @@ void setup() {
             // Write file to save value
             writeFile(SPIFFS, mdnsPath, mdnsdotlocalurl.c_str());
           }
-          
+          // HTTP POST dhcp value on
+          if (p->name() == PARAM_INPUT_6) {
+            dhcpcheck = p->value().c_str();
+            Serial.print("dhcpcheck set to: ");
+            Serial.println(dhcpcheck);
+            // Write file to save value
+            writeFile(SPIFFS, dhcpcheckPath, dhcpcheck.c_str());
+          }
+
           //Serial.printf("POST[%s]: %s\n", p->name().c_str(), p->value().c_str());
         }
       }
-      request->send(200, "text/html", "<h1>Done. ESP restart,<br> connect router <br>go to: " + ip + " <br><a href=\"http://"+mdnsdotlocalurl+".local\">http://"+mdnsdotlocalurl+".local</a> Android use BonjourBrowser App</h1>");
+      request->send(200, "text/html", "<h1>Done. ESP restart,<br> connect router <br>go to: " + ip + " <br><a href=\"http://" + mdnsdotlocalurl + ".local\">http://" + mdnsdotlocalurl + ".local</a> Android use BonjourBrowser App</h1>");
       delay(3000);
       ESP.restart();
     });
@@ -356,35 +374,35 @@ unsigned long startmillis = 0;
 
 void loop() {
 
-/*
-  if (millis() - startmillis >= 10000) {    // non blocking delay 10 seconds
-    startmillis = millis();
-    
-    browseService("http", "tcp");
-    Serial.println("scan start");
-    // WiFi.scanNetworks will return the number of networks found
-    int n = WiFi.scanNetworks();
-    Serial.println("scan done");
-    if (n == 0) {
-      Serial.println("no networks found");
-    } else {
-      Serial.print(n);
-      Serial.println(" networks found");
-      for (int i = 0; i < n; ++i) {
-        // Print SSID and RSSI for each network found
-        Serial.print(i + 1);
-        Serial.print(": ");
-        Serial.print(WiFi.SSID(i));
-        Serial.print(" (");
-        Serial.print(WiFi.RSSI(i));
-        Serial.print(")");
-        Serial.println((WiFi.encryptionType(i) == WIFI_AUTH_OPEN) ? " " : "*");
-        delay(10);
+  /*
+    if (millis() - startmillis >= 10000) {    // non blocking delay 10 seconds
+      startmillis = millis();
+
+      browseService("http", "tcp");
+      Serial.println("scan start");
+      // WiFi.scanNetworks will return the number of networks found
+      int n = WiFi.scanNetworks();
+      Serial.println("scan done");
+      if (n == 0) {
+        Serial.println("no networks found");
+      } else {
+        Serial.print(n);
+        Serial.println(" networks found");
+        for (int i = 0; i < n; ++i) {
+          // Print SSID and RSSI for each network found
+          Serial.print(i + 1);
+          Serial.print(": ");
+          Serial.print(WiFi.SSID(i));
+          Serial.print(" (");
+          Serial.print(WiFi.RSSI(i));
+          Serial.print(")");
+          Serial.println((WiFi.encryptionType(i) == WIFI_AUTH_OPEN) ? " " : "*");
+          delay(10);
+        }
       }
+      Serial.println("");
     }
-    Serial.println("");
-  }
-*/
+  */
 }
 
 
@@ -393,28 +411,28 @@ void loop() {
 // for now prints to serial monitor
 // https://github.com/ldijkman/Hey_Electra/blob/main/ESP32/ESP32_mDNS_list.ino
 
-void browseService(const char * service, const char * proto){
-    Serial.printf("Browsing for service _%s._%s.local. ... ", service, proto);
-    int n = MDNS.queryService(service, proto);
-    if (n == 0) {
-        Serial.println("no services found");
-    } else {
-        Serial.print(n);
-        Serial.println(" service(s) found");
-        for (int i = 0; i < n; ++i) {
-            // Print details for each service found
-            Serial.print("  ");
-            Serial.print(i + 1);
-            Serial.print(": ");
-            Serial.print(MDNS.hostname(i));
-            Serial.print(" (");
-            Serial.print(MDNS.IP(i));
-            Serial.print(":");
-            Serial.print(MDNS.port(i));
-            Serial.println(")");
-        }
+void browseService(const char * service, const char * proto) {
+  Serial.printf("Browsing for service _%s._%s.local. ... ", service, proto);
+  int n = MDNS.queryService(service, proto);
+  if (n == 0) {
+    Serial.println("no services found");
+  } else {
+    Serial.print(n);
+    Serial.println(" service(s) found");
+    for (int i = 0; i < n; ++i) {
+      // Print details for each service found
+      Serial.print("  ");
+      Serial.print(i + 1);
+      Serial.print(": ");
+      Serial.print(MDNS.hostname(i));
+      Serial.print(" (");
+      Serial.print(MDNS.IP(i));
+      Serial.print(":");
+      Serial.print(MDNS.port(i));
+      Serial.println(")");
     }
-    Serial.println();
+  }
+  Serial.println();
 
 
 // got it working???
