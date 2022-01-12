@@ -1,3 +1,25 @@
+
+
+
+
+
+# Moved to:
+# https://github.com/ldijkman/randomnerd_esp32_wifi_manager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Unfinished, maybe under construction
 
 # Hey Electra
