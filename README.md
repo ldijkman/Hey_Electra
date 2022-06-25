@@ -4,6 +4,7 @@ ESP8266 ESP8285 ESP32 mDNS Wifi Relais Switch with switched time settings
 ---
 # Hey Electra moved to 
 # https://github.com/ldijkman/randomnerd_esp32_wifi_manager
+# https://ldijkman.github.io/Electra/
 # Better go there, this is old
 ---
 -
